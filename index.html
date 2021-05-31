@@ -3,7 +3,7 @@
     <head>
         
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="description" content="Hackathon">
         
         <link href="img/logo.png" rel="shortcut icon" />
@@ -26,7 +26,7 @@
 
         <!-- Custom hackathon CSS -->
         <link href="css/hackathon.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
+        <!-- <link href="css/styles.css" rel="stylesheet"> -->
 
         <!-- Custom liabrary -->
         <link rel="stylesheet" href="css/hover/hover-min.css">
@@ -96,49 +96,70 @@
     
             });
         </script>
+        
 
     </head>
     
     <body class="animsition animsition-main body-bg" >
 
         <!-- Navigation -->
+
+        <!--
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container"> 
-                
-                <a href="/" class="navbar-brand js-scroll-trigger ">
-                    <img src="img/hack-logo.png"/>
-                </a>
-
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-                    <ul class="navbar-nav pull-left align-bottom" style="direction: rtl;">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about-hack">عن الهاكاثون</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#challenges">التحديات</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#timeline">الخط الزمني</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#faq">الأسئلة الشائعة</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#register">التسجيل</a></li>
-                    </ul>
-                </div>
+                <div class="topnav">
+                    <a href="#about">الأسئلة الشائعة</a>
+                    <a href="#about">الخط الزمني</a>
+                    <a href="#contact">التحديات</a>
+                    <a href="#news">عن الهاكاثون</a> 
+                    <a class="active" href="#home">الرئيسية</a>
+                    
+                  </div>
+                 <img src="img/hack-logo.png"  width="150"
+                         height="40">            
+                      
             </div>
         </nav>
+        -->
+        <!----------------------------------------------------------->
 
         <!-- The site header -->
         <header>
-
-            
+            <nav>
+                <input id="nav-toggle" type="checkbox">
+                <div class="logo"><img src="img/logo.png"  width="80px"
+                             height="5px">   </div>
+                <ul class="links">
+                    <li><a href="#main-page">الرئيسية</a></li>
+                    <li ><a href="#about-hack">عن الهاكاثون</a></li>
+                    <li ><a href="#challenges">التحديات</a></li>
+                    <li ><a href="#timeline">الخط الزمني</a></li>
+                    <li ><a href="#faq">الأسئلة الشائعة</a></li>
+                </ul>
+    
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </nav>
         </header>
 
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("nav");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        
         <!-- The site content -->
         <div>
 
             <!-- مقدمة عن الهاكاثون -->
             <div class="jumbotron text-right custom-bg-img" id="main-page" >
                 <div class="container custom-bg-color animsition-zoom" >
-                    <h1 class="text-dark-blue" style="font-size: 4em;">
+                    <h1 class="text-dark-blue" style="font-size: 4em; padding-top: 50px;">
                        هاكاثون برمج
                     </h1>
                     <h3 class="text-blue" style="padding-top: 50px;">
@@ -153,9 +174,6 @@
                     
                 </div>
                
-            </div><!-- /.jumbotron -->
-            
-                </div>
             </div>
 
             <!-- عن الهاكاثون -->
@@ -273,13 +291,7 @@
                     <a href="https://twitter.com/hackathon_x"><i class="icon ion-social-twitter"></i></a>
                     <!--<a href="#"><i class="icon ion-social-facebook"></i></a>-->
                 </div>
-                <ul class="list-inline" style="direction: rtl;">
-                    <li class="list-inline-item"><a href="#">الرئيسية</a></li>
-                    <li class="list-inline-item"><a href="#">عن الهاكاثون</a></li>
-                    <li class="list-inline-item"><a href="#">التحديات</a></li>
-                    <li class="list-inline-item"><a href="#">الخط الزمني</a></li>
-                    <li class="list-inline-item"><a href="#">الأسئلة الشائعة</a></li>
-                </ul>
+               
                 <p class="copyright">HackathonX 2021</p>
             </footer>
         </div>
