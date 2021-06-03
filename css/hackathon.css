@@ -320,7 +320,6 @@ nav ul li a.active {
 .banner {
 	/* for positioning */
 	width: 100%;
-  top: 50px;
 	position: fixed;
 
 	/* for content alignment */
@@ -333,7 +332,7 @@ nav ul li a.active {
 div.site-content {
 	width: 100%;
 	position: relative;
-	top: 600px; 
+	top: 475px; 
 	background: #cfeefa;
 	height: 100%; 
 }
@@ -450,7 +449,7 @@ section.timeline-outer {
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #bdebfd;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -462,7 +461,7 @@ section.timeline-outer {
 
 .footer-basic {
   padding:40px 0;
-  background-color:#ffffff94;
+  background-color:rgba(0,0,0,.8);
   color:#1377A1;
 }
 
@@ -502,7 +501,7 @@ section.timeline-outer {
   display:inline-block;
   text-align:center;
   border-radius:50%;
-  border:1px solid #ccc;
+  border:1px solid #1377A1;
   margin:0 8px;
   color:inherit;
   opacity:0.75;
