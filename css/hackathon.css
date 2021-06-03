@@ -62,6 +62,7 @@ html {
 body ,input {
   font-family: 'TBukra-Regular', 'Font-2';
   text-align: right;
+  font-weight: bold;
 }
 
 h1, h2 {
@@ -258,6 +259,14 @@ nav.sticky .links a{
   color: #39B1DE;
 }
 
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+nav ul li a.active {
+  background-color: rgba(255, 11, 11, 0.007);
+  position: relative;
+}
+
 /*******************************************************/
 
  /* Add a black background color to the top navigation */
@@ -303,6 +312,31 @@ nav.sticky .links a{
   }
 
 /*******************************************************/
+
+/**********************
+        Banner
+ *********************/
+
+.banner {
+	/* for positioning */
+	width: 100%;
+  top: 50px;
+	position: fixed;
+
+	/* for content alignment */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+div.site-content {
+	width: 100%;
+	position: relative;
+	top: 600px; 
+	background: #cfeefa;
+	height: 100%; 
+}
 
 /**********************
        TimeLine 
