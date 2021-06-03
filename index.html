@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Hackathon">
+        
+        <link href="img/logo.png" rel="shortcut icon" />
+        <title>هاكاثون برمج</title>
+
+        <!-- CSS files -->
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <!-- Custom bootstrap CSS  -->
+        <link href="css/bootstrap/carousel.css" rel="stylesheet">
+        <link href="css/bootstrap/pricing.css" rel="stylesheet">
+
+        <!-- animsition library -->
+        <link rel="stylesheet" href="css/animsition/animsition.min.css">
+        <script src="css/animsition/animsition.js"></script>
+
+        <!-- Custom hackathon CSS -->
+        <link href="css/hackathon.css" rel="stylesheet">
+        <!-- <link href="css/styles.css" rel="stylesheet"> -->
+
+        <!-- Custom liabrary -->
+        <link rel="stylesheet" href="css/hover/hover-min.css">
+        
+        <!-- Other CSS -->
+        <link href="css/util.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+        <script>
+            $(document).ready(function () {
+                $('.animsition').animsition();
+                //====== Frames ========
+    
+                //mainFrame
+                $('.animsition-main').animsition({
+                    inClass: 'zoom-in-sm',
+                    outClass: 'zoom-out-sm'
+                });
+    
+                $('.animsition-zoom').animsition({
+                    inClass: 'zoom-in-sm',
+                    outClass: 'zoom-out-sm'
+                });
+    
+                $('.animsition-fade-up').animsition({
+                    inClass: 'fade-in-up-sm',
+                    outClass: 'fade-out-up-sm'
+                });
+    
+                $('.animsition-fade-right').animsition({
+                    inClass: 'fade-in-right-sm',
+                    outClass: 'fade-out-right-sm'
+                });
+    
+                $('.animsition-fade-left').animsition({
+                    inClass: 'fade-in-left-sm',
+                    outClass: 'fade-out-left-sm'
+                });
+    
+                $('.animsition-fade-up').animsition({
+                    inClass: 'fade-in-up-lg',
+                    outClass: 'fade-out-up-lg'
+                });
+    
+            });
+        </script>
+        
+
+    </head>
+    
+    <body class="animsition animsition-main body-bg" >
+
+        <!-- The site header -->
+        <header>
+            <!-- Navigation -->
+            <nav>
+                <input id="nav-toggle" type="checkbox">
+                <div class="logo"><img src="img/logo.png"  width="80px"
+                             height="5px">   </div>
+                <ul class="links">
+                    <li><a href="#main-page">الرئيسية</a></li>
+                    <li ><a href="#about-hack">عن الهاكاثون</a></li>
+                    <li ><a href="#challenges">التحديات</a></li>
+                    <li ><a href="#timeline">الخط الزمني</a></li>
+                    <li ><a href="#faq">الأسئلة الشائعة</a></li>
+                </ul>
+    
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </nav>
+        </header>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("nav");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        
+        <!-- The site content -->
+
+            <!-- مقدمة عن الهاكاثون -->
+            <div class="jumbotron text-right custom-bg-img banner" id="main-page" >
+                <div class="container custom-bg-color animsition-zoom" >
+                    <h1 class="text-dark-blue" style="font-size: 4em; padding-top: 100px;">
+                       هاكاثون برمج
+                    </h1>
+                    <h3 class="text-blue" style="padding-top: 50px;">
+                       وصف الهاكاثون
+                    </h3>
+                    <br />
+                    <h5 class="text-dark-blue">
+                        <br />
+                        وصف الهاكاثون ​
+                    </h5>
+                    <br />
+                    
+                </div>
+               
+            </div>
+        
+        <div class="site-content"> 
+            <!-- عن الهاكاثون -->
+            <div class="container" id="about-hack" style="padding: 100px;">
+
+                <h2 class="text-dark-blue">
+                    <br />
+                    عن الهاكاثون ​
+                </h2>
+            </div>
+
+            <!-- التحديات والمجالات -->
+            <div class="container" id="challenges">
+                <hr class="featurette-divider">
+                <h2 class="text-dark-blue">
+                    <br />
+                    التحديات والمجالات​
+                </h2>
+
+
+            </div>
+
+            <!-- Hackathon Fields -->
+            <div class="jumbotron text-center album py-5 custom-bg-img animsition-fade-up" id="fields-page">
+                <div class="container custom-bg-color ">
+                    <h2 class="text-dark-blue">
+                        <i class="fa " aria-hidden="true"></i>
+                        مجالات الهاكاثون
+                    </h2>
+                    
+                    <br />
+                </div>
+                <div class="row ">
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </h1>
+                                <h2 class="text-blue">
+                                    اسم المجال
+                                </h2>
+                                <hr>
+                                <h3 class="card-text text-dark-blue">
+                                    وصف المجال
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                </h1>
+                                <h2 class="text-blue">
+                                    اسم المجال
+                                </h2>
+                                <hr>
+                                <h3 class="card-text text-dark-blue">
+                                    وصف المجال
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                </h1>
+                                <h2 class="text-blue">
+                                    اسم المجال
+                                </h2>
+                                <hr>
+                                <h3 class="card-text text-dark-blue">
+                                    وصف المجال
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                </h1>
+                                <h2 class="text-blue">
+                                    اسم المجال
+                                </h2>
+                                <hr>
+                                <h3 class="card-text text-dark-blue">
+                                    وصف المجال
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.jumbotron -->
+
+            <!-- الخط الزمني -->
+            <!-- We can use an image rather than table for timeline -->
+            <div class="container marketing" id="timeline">
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-6 order-md-2 text-right animsition-fade-right">
+                        <h2 class="featurette-heading text-dark-blue">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            خطواتنا لتعيش التجربة
+                            <br />
+                            <br>
+                            <span class="text-muted" style="font-size: 33px;">
+                                كل خطوات التجربة من بداية التسجيل إلى النهائية
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="col-md-6 order-md-1 animsition-fade-left">
+                        <div class="main-container">
+                            <section id="timeline" class="timeline-outer">
+                                <div class="container" id="content">
+                                    <div class="row">
+                                        <div class="col s12 m12 l12">
+                                            <ul class="timeline">
+                                                <li class="event">
+                                                    <h3 class="custom-en-text">Date</h3>
+                                                    <p>1. بداية التسجيل </p>
+                                                </li>
+                                                <li class="event">
+                                                    <h3 class="custom-en-text">Date</h3>
+                                                    <p>2. ورش العمل </p>
+                                                </li>
+                                                <li class="event">
+                                                    <h3 class="custom-en-text">Date</h3>
+                                                    <p>3. بداية الهاكاثون </p>
+                                                </li>
+                                                <li class="event">
+                                                    <h3 class="custom-en-text">Date</h3>
+                                                    <p>4. عرض المشاريع وإعلان النتائج</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+            </div> <!-- /.container -->
+         
+            <!-- التسجيل -->
+            <div class="container" id="register">
+                <h2 class="text-dark-blue">
+                    <a href="\">سجل الآن!</a>
+                </h2>
+
+                
+            </div>
+            
+            <!-- الأسئلة الشائعة -->
+            <div class="container" id="faq" style="padding-bottom: 100px;">
+
+                <hr class="featurette-divider">
+
+                <!----------------------------------------------------------->
+                
+                <h2 class=" text-dark-blue" style="padding-bottom: 50px;  padding-top: 50px;">
+                    الاسئلة الشائعة
+                </h2>
+
+                <button class="accordion text-dark-blue">هل يمكني ان اسجل بدون فريق ؟</button>
+                <div class="panel text-dark-blue">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion text-dark-blue">كم السن المطلوب للتسجيل ؟</button>
+                <div class="panel text-dark-blue">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion text-dark-blue">هل يمكني التسجيل بدون خبرة ؟</button>
+                <div class="panel text-dark-blue">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+    
+                <!----------------------------------------------------------->
+
+            </div>
+
+            <!-- الرعاة -->
+            <div class="container" id="sponsers">
+
+                <hr class="featurette-divider">
+                <h3 class="text-dark-blue">
+                    <br />
+                    الرعاة​
+                </h3>
+
+                <br /><br /><br /><br />
+
+            </div>
+
+            <div class="footer-basic">
+                <footer>
+                    <!-- All rights reserved Social medias -->
+                    <div class="social">
+                        <!--<a href="#"><i class="icon ion-social-instagram"></i></a>-->
+                        <!--<a href="#"><i class="icon ion-social-snapchat"></i></a>-->
+                        <a href="https://twitter.com/hackathon_x"><i class="icon ion-social-twitter"></i></a>
+                        <!--<a href="#"><i class="icon ion-social-facebook"></i></a>-->
+                    </div>
+                   
+                    <p class="copyright">HackathonX 2021</p>
+                </footer>
+            </div>
+
+        </div> 
+
+        <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/faqs.js"></script>
+
+        
+    </body>
+</html>
