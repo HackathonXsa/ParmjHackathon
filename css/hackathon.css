@@ -260,9 +260,17 @@ nav.sticky .links a{
 }
 
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 nav ul li a.active {
+  background-color: rgba(0, 0, 0, 0.007);
+  position: relative;
+}
+
+nav.sticky ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+nav.sticky ul li a.active {
   background-color: rgba(255, 11, 11, 0.007);
   position: relative;
 }
@@ -332,9 +340,22 @@ nav ul li a.active {
 div.site-content {
 	width: 100%;
 	position: relative;
-	top: 475px; 
+	top: 940px; 
 	background: #cfeefa;
 	height: 100%; 
+}
+
+.banner-bg{
+  background-position: center; 
+  background-size: 100%; 
+  height: 100%;
+}
+
+@media screen and (max-width: 1505px) {
+  .banner-bg{
+    background-position: center; 
+    background-size: cover; 
+  }
 }
 
 /**********************
