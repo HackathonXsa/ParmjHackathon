@@ -77,21 +77,22 @@
 
     </head>
     
-    <body class="animsition animsition-main body-bg" >
+    <body class="animsition animsition-main body-bg" id="main-page">
 
         <!-- The site header -->
         <header>
             <!-- Navigation -->
             <nav>
                 <input id="nav-toggle" type="checkbox">
-                <div class="logo"><img src="img/logo.png"  width="80px"
-                             height="5px">   </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png"  width="80px" height="5px"> 
+                    </a>  
+                </div>
                 <ul class="links">
                     <li><a href="#main-page">الرئيسية</a></li>
-                    <li ><a href="#about-hack">عن الهاكاثون</a></li>
-                    <li ><a href="#challenges">التحديات</a></li>
-                    <li ><a href="#timeline">الخط الزمني</a></li>
-                    <li ><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li ><a href="#hackathons">الهاكاثونات</a></li>
+                    <li ><a href="#timeline">التقويم</a></li>
                 </ul>
     
                 <label for="nav-toggle" class="icon-burger">
@@ -119,12 +120,12 @@
                        هاكاثون برمج
                     </h1>
                     <h3 class="text-blue" style="padding-top: 50px;">
-                       وصف الهاكاثون
+                        مجموعة من المسابقات البرمجية التي تقيمها جمعية مبرمجين 
                     </h3>
                     <br />
                     <h5 class="text-dark-blue">
                         <br />
-                        وصف الهاكاثون ​
+                        تهدف الى تحسين وتطوير العديد من المجالات في الجوانب المجتمعية  ​
                     </h5>
                     <br />
                     
@@ -133,42 +134,20 @@
             </div>
         
         <div class="site-content"> 
-            <!-- عن الهاكاثون -->
-            <div class="container" id="about-hack" style="padding: 100px;">
 
-                <h2 class="text-dark-blue">
-                    <br />
-                    عن الهاكاثون ​
-                </h2>
-                <h3 class="text-blue" style="padding-top: 50px;">
-                    وصف 
-                </h3>
-            </div>
+            <!-- الهاكاثونات -->
+            <div class="jumbotron text-center album py-5 custom-bg-img animsition-fade-up" id="hackathons">
 
-            <!-- التحديات والمجالات -->
-            <div class="container" id="challenges">
-                <hr class="featurette-divider">
-                <h2 class="text-dark-blue">
-                    <br />
-                    التحديات والمجالات​
-                </h2>
-                <h3 class="text-blue" style="padding-top: 50px;">
-                    وصف 
-                </h3>
-
-
-            </div>
-
-            <!-- Hackathon Fields -->
-            <div class="jumbotron text-center album py-5 custom-bg-img animsition-fade-up" id="fields-page">
                 <div class="container custom-bg-color ">
-                    <h2 class="text-dark-blue">
+                    <h2 class="text-dark-blue" style="padding: 50px 0;">
                         <i class="fa " aria-hidden="true"></i>
-                        مجالات الهاكاثون
+                        الهاكاثونات
                     </h2>
                     
                     <br />
                 </div>
+
+                <!-- Row One -->
                 <div class="row ">
                     <div class="col-md">
                         <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
@@ -176,13 +155,18 @@
                                 <h1 class="text-blue">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </h1>
-                                <h2 class="text-blue">
-                                    اسم المجال
-                                </h2>
-                                <hr>
-                                <h3 class="card-text text-dark-blue">
-                                    وصف المجال
-                                </h3>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+                                
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون السفر
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -192,13 +176,17 @@
                                 <h1 class="text-blue">
                                     <i class="fa fa-briefcase" aria-hidden="true"></i>
                                 </h1>
-                                <h2 class="text-blue">
-                                    اسم المجال
-                                </h2>
-                                <hr>
-                                <h3 class="card-text text-dark-blue">
-                                    وصف المجال
-                                </h3>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون الزراعة
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -209,13 +197,17 @@
                                 <h1 class="text-blue">
                                     <i class="fa fa-briefcase" aria-hidden="true"></i>
                                 </h1>
-                                <h2 class="text-blue">
-                                    اسم المجال
-                                </h2>
-                                <hr>
-                                <h3 class="card-text text-dark-blue">
-                                    وصف المجال
-                                </h3>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون الثقافة
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -226,125 +218,103 @@
                                 <h1 class="text-blue">
                                     <i class="fa fa-briefcase" aria-hidden="true"></i>
                                 </h1>
-                                <h2 class="text-blue">
-                                    اسم المجال
-                                </h2>
-                                <hr>
-                                <h3 class="card-text text-dark-blue">
-                                    وصف المجال
-                                </h3>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون اللغات
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Row Two -->
+                <div class="row ">
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </h1>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون الصحة النفسية
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                </h1>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون حقوق الإنسان
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
+                            <div class="card-body text-center">
+                                <h1 class="text-blue">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                </h1>
+                                <img src="img/logo.png"  width="100px" height="10px"> 
+
+                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
+                                    هاكاثون الخدمة العامة والمجتمعية
+                                </h4>
+
+                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
+
+                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
+                                    لمعرفة المزيد
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                
                 </div>
 
             </div><!-- /.jumbotron -->
 
             <!-- الخط الزمني -->
             <!-- We can use an image rather than table for timeline -->
-            <div class="container marketing" id="timeline">
+            <div class="container marketing" id="timeline" style="padding-bottom: 100px;">
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette">
-                    <div class="col-md-6 order-md-2 text-right animsition-fade-right">
-                        <h2 class="featurette-heading text-dark-blue">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            خطواتنا لتعيش التجربة
-                            <br />
-                            <br>
-                            <span class="text-muted" style="font-size: 33px;">
-                                كل خطوات التجربة من بداية التسجيل إلى النهائية
-                            </span>
-                        </h2>
-                    </div>
-                    <div class="col-md-6 order-md-1 animsition-fade-left">
-                        <div class="main-container">
-                            <section id="timeline" class="timeline-outer">
-                                <div class="container" id="content">
-                                    <div class="row">
-                                        <div class="col s12 m12 l12">
-                                            <ul class="timeline">
-                                                <li class="event">
-                                                    <h3 class="custom-en-text">Date</h3>
-                                                    <p>1. بداية التسجيل </p>
-                                                </li>
-                                                <li class="event">
-                                                    <h3 class="custom-en-text">Date</h3>
-                                                    <p>2. ورش العمل </p>
-                                                </li>
-                                                <li class="event">
-                                                    <h3 class="custom-en-text">Date</h3>
-                                                    <p>3. بداية الهاكاثون </p>
-                                                </li>
-                                                <li class="event">
-                                                    <h3 class="custom-en-text">Date</h3>
-                                                    <p>4. عرض المشاريع وإعلان النتائج</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <br />
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-dark-blue"> TimeLine </h2>
 
-                <hr class="featurette-divider">
             </div> <!-- /.container -->
          
-            <!-- التسجيل -->
-            <div class="container" id="register">
-                <h2 class="text-dark-blue">
-                    <a href="\">سجل الآن!</a>
-                </h2>
 
-                
-            </div>
-            
-            <!-- الأسئلة الشائعة -->
-            <div class="container" id="faq" style="padding-bottom: 100px;">
-
-                <hr class="featurette-divider">
-
-                <!----------------------------------------------------------->
-                
-                <h2 class=" text-dark-blue" style="padding-bottom: 50px;  padding-top: 50px;">
-                    الاسئلة الشائعة
-                </h2>
-
-                <button class="accordion text-dark-blue">هل يمكني ان اسجل بدون فريق ؟</button>
-                <div class="panel text-dark-blue">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-
-                <button class="accordion text-dark-blue">كم السن المطلوب للتسجيل ؟</button>
-                <div class="panel text-dark-blue">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-
-                <button class="accordion text-dark-blue">هل يمكني التسجيل بدون خبرة ؟</button>
-                <div class="panel text-dark-blue">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-    
-                <!----------------------------------------------------------->
-
-            </div>
-
-            <!-- الرعاة -->
-            <div class="container" id="sponsers">
-
-                <hr class="featurette-divider">
-                <h3 class="text-dark-blue">
-                    <br />
-                    الرعاة​
-                </h3>
-
-                <br /><br /><br /><br />
-
-            </div>
 
             <div class="footer-basic">
                 <footer>
