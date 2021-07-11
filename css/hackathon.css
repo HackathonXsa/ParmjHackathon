@@ -53,6 +53,8 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 html {
@@ -93,6 +95,14 @@ h3, h4, h5, h6 {
   background-color: #b4e2f44d;
 }
 
+#particles-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
 /**********************
       Custom texts 
  *********************/
@@ -111,6 +121,10 @@ p {
 
 .text-dark-blue {
   color: #1377A1;
+}
+
+.text-white {
+  color: white;
 }
 
 .text-bolder {
@@ -261,7 +275,7 @@ nav .icon-burger .line {
 }
 
 nav.sticky{
-  background-color: rgba(0,0,0,.8);
+  background-color: white;
 }
 
 nav.sticky .links a{
@@ -349,20 +363,22 @@ nav.sticky ul li a.active {
 div.site-content {
 	width: 100%;
 	position: relative;
-	top: 940px; 
-	background: #cfeefa;
+	top: 960px; 
+	background: #3288b6;
 	height: 100%; 
 }
 
 .banner-bg{
-  background-position: center; 
-  background-size: 100%; 
+  background-position: 50% 100%; 
+  background-size: cover;
   height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1505px) {
   .banner-bg{
-    background-position: center; 
+    background-position: center center; 
     background-size: cover; 
   }
 }
@@ -374,6 +390,8 @@ div.site-content {
 #content {
   /* margin-top: 50px; */
   text-align: center;
+  background-color: white;
+  border-radius: 8px;
 }
 
 section.timeline-outer {
@@ -449,7 +467,7 @@ section.timeline-outer {
  *********************/
 
  .accordion {
-  background-color: rgba(0, 183, 255, 0.185);
+  background-color: rgba(255, 255, 255, 0.966);
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -549,4 +567,110 @@ section.timeline-outer {
   color:#1377A1;
   margin-bottom:0;
 }
+
+/************
+ content area
+   **********/
+.content-row {
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1520px){
+  .content-row {
+    flex-wrap: wrap;
+  }
+}
   
+.single-services {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 30px 0px rgba(167, 167, 167, 0.16);
+  -moz-box-shadow: 0px 5px 30px 0px rgba(167, 167, 167, 0.16);
+  box-shadow: 0px 5px 30px 0px rgba(167, 167, 167, 0.16);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  padding: 50px 30px;
+  border: 2px solid transparent;
+  border-radius: 8px; }
+  @media (max-width: 767px) {
+    .single-services {
+      padding: 20px 20px 30px; } }
+  .single-services .services-icon {
+    display: inline-block;
+    position: relative; }
+    .single-services .services-icon img {
+      -webkit-transition: all 0.4s ease-out 0s;
+      -moz-transition: all 0.4s ease-out 0s;
+      -ms-transition: all 0.4s ease-out 0s;
+      -o-transition: all 0.4s ease-out 0s;
+      transition: all 0.4s ease-out 0s; }
+    .single-services .services-icon .shape-1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .single-services .services-icon i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 34px;
+      color: #fff; }
+  .single-services .services-content .services-title a {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2E2E2E;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .single-services .services-content .services-title a {
+        font-size: 24px; } }
+    @media (max-width: 767px) {
+      .single-services .services-content .services-title a {
+        font-size: 20px; } }
+    .single-services .services-content .services-title a:hover {
+      color: #361CC1; }
+  .single-services .services-content .text {
+    margin-top: 30px;
+    color: black; }
+    @media (max-width: 767px) {
+      .single-services .services-content .text {
+        margin-top: 20px; } }
+  .single-services .services-content .more {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2E2E2E;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+    .single-services .services-content .more i {
+      margin-left: 10px; }
+    .single-services .services-content .more:hover {
+      color: #361CC1; }
+  .single-services:hover {
+    border-color: #331f73; }
+    .single-services:hover .services-icon .shape {
+      -webkit-transform: rotate(25deg);
+      -moz-transform: rotate(25deg);
+      -ms-transform: rotate(25deg);
+      -o-transform: rotate(25deg);
+      transform: rotate(25deg); }
+  .services-content .services-title a:hover{
+    text-decoration: none;
+  }

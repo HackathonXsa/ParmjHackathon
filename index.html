@@ -34,6 +34,9 @@
         <!-- animation CSS -->
         <link rel="stylesheet" href="css/animate.css">
 
+        <!-- Icons CSS -->
+        <link rel="stylesheet" href="css/LineIcons.css">
+
         <!-- Other CSS -->
         <link href="css/util.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -117,7 +120,7 @@
         <!-- The site content -->
 
             <!-- مقدمة عن الهاكاثون -->
-            <div class="jumbotron text-right custom-bg-img banner banner-bg" id="main-page" style="background-image: url('img/bg.png');" >
+            <div class="jumbotron text-right custom-bg-img banner banner-bg" id="main-page" style="background-image: url('img/banner-bg-svg.svg');" >
                 <div class="container custom-bg-color animsition-zoom" >
                     <h1 class="text-dark-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="font-size: 4em; padding-top: 100px;">
                        هاكاثون برمج
@@ -133,7 +136,7 @@
                     <br />
                     
                 </div>
-               
+                <div id="particles-1" class="particles"></div>
             </div>
         
         <div class="site-content"> 
@@ -142,7 +145,7 @@
             <div class="jumbotron text-center album py-5 custom-bg-img animsition-fade-up" id="hackathons">
 
                 <div class="container custom-bg-color ">
-                    <h2 class="text-dark-blue" style="padding: 50px 0;">
+                    <h2 class="text-white" style="padding: 50px 0;">
                         <i class="fa wow " aria-hidden="true"></i>
                         الهاكاثونات
                     </h2>
@@ -151,7 +154,7 @@
                 </div>
 
                 <!-- Row One -->
-                <div class="row ">
+                <!-- <div class="row ">
                     <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
                             <div class="card-body text-center">
@@ -235,10 +238,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Row Two -->
-                <div class="row ">
+                <!-- <div class="row ">
                     <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="1.4s">
                         <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
                             <div class="card-body text-center">
@@ -303,7 +306,114 @@
                     </div>
 
                 
-                </div>
+                </div> -->
+
+                <section id="features" class="services-area p-t-30" >
+                    <div class="container" >
+                        <div class="row justify-content-center content-row">
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-1.svg" alt="shape">
+                                        <i class="lni-travel"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون السفر</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="hackathon.html">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
+                                        <i class="lni-trees"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون الزراعة</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-3.svg" alt="shape">
+                                        <i class="lni-book"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون الثقافة</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
+                                        <i class="lni-text-format"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون اللغات</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                        </div> <!-- row -->
+                        <div class="row justify-content-center content-row pt-3">
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-3.svg" alt="shape">
+                                        <i class="lni-thought"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون الصحة النفسية</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-1.svg" alt="shape">
+                                        <i class="lni-hand"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون حقوق الإنسان</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                    <div class="services-icon">
+                                        <img class="shape" src="img/services-shape.svg" alt="shape">
+                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
+                                        <i class="lni-users"></i>
+                                    </div>
+                                    <div class="services-content mt-30">
+                                        <h4 class="services-title"><a href="#">هاكاثون الخدمة العامة والمجتمعية</a></h4>
+                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                    </div>
+                                </div> <!-- single services -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </section>
 
             </div><!-- /.jumbotron -->
 
@@ -313,7 +423,7 @@
 
                 <hr class="featurette-divider">
 
-                <h2 class="text-dark-blue"> TimeLine </h2>
+                <h2 class="text-white"> TimeLine </h2>
 
             </div> <!-- /.container -->
          
@@ -341,11 +451,17 @@
 
         <!--====== wow js ======-->
         <script src="js/wow.min.js"></script>
-        <script>new WOW().init();</script>
 
             <!--====== Jquery js ======-->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+
+            <!--====== Particles js ======-->
+        <script src="js/particles.min.js"></script>
+        
+        <!-- main js -->
+
+        <script src="js/main.js"></script>
 
         
     </body>
