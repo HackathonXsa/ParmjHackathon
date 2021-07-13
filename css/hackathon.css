@@ -478,6 +478,7 @@ section.timeline-outer {
   font-size: 15px;
   transition: 0.4s;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .active, .accordion:hover {
@@ -510,8 +511,8 @@ section.timeline-outer {
 
 .footer-basic {
   padding:40px 0;
-  background-color:rgba(0,0,0,.8);
-  color:#1377A1;
+  background-color:#282d32;
+  color:#89dcff;
 }
 
 .footer-basic ul {
@@ -567,6 +568,8 @@ section.timeline-outer {
   color:#1377A1;
   margin-bottom:0;
 }
+
+
 
 /************
  content area
@@ -674,3 +677,5 @@ section.timeline-outer {
   .services-content .services-title a:hover{
     text-decoration: none;
   }
+
+  

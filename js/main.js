@@ -30,6 +30,7 @@ $(function () {
 
     new WOW().init();
 
+    
 
     //=====  particles
 
