@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HackathonController;
+use App\Http\Controllers\HackathonFieldsController;
 use App\Http\Controllers\HackathonPagesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
@@ -39,6 +40,10 @@ Route::middleware('auth')->group(function(){
     Route::patch('/hackathons/{hackathon}/update', [HackathonController::class, 'update'])->name('hackathon.update');
     Route::delete('/hackathons/{hackathon}/destroy', [HackathonController::class, 'destroy'])->middleware('can:delete,hackathon')->name('hackathon.destroy');
 
-    Route::get('/hackathons/{hackathon}/page', [HackathonPagesController::class, 'edit'])->name('hackathon.page.edit');
-    Route::patch('/hackathons/{hackathon}/page/update', [HackathonPagesController::class, 'update'])->name('hackathon.page.update');
+    Route::get('/hackathons/page/{hackathon}', [HackathonPagesController::class, 'edit'])->name('hackathon.page.edit');
+    Route::patch('/hackathons/page/update/{hackathon}', [HackathonPagesController::class, 'update'])->name('hackathon.page.update');
+
+    Route::post('/hackathons/fields/store', [HackathonFieldsController::class, 'store'])->name('hackathons.fields.store');
+    Route::patch('/hackathons/fields/{hackathon}/update', [HackathonFieldsController::class, 'update'])->name('hackathons.fields.update');
+    Route::delete('/hackathons/fields/{hackathon}/delete', [HackathonFieldsController::class, 'destroy'])->name('hackathons.fields.delete');
 });

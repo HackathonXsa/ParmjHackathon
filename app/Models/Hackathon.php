@@ -21,4 +21,9 @@ class Hackathon extends Model
         return $this->hasOne(Hackathon::class);
     }
 
+    public function hackathonFields(){
+
+        return $this->hasMany(Hackathon::class);
+    }
+
 }

@@ -135,15 +135,15 @@
             <div class="jumbotron text-right custom-bg-img banner banner-bg" id="main-page" style="background-image: url({{ asset('img/banner-bg-svg.svg') }});" >
                 <div class="container custom-bg-color animsition-zoom" >
                     <h1 class="text-dark-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="font-size: 4em; padding-top: 100px;">
-                       هاكاثون السفر
+                       {{$namehacka->name}}
                     </h1>
                     <h3 class="text-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s" style="padding-top: 50px;">
-                       وصف الهاكاثون{{$hackathon->first_description}}
+                       {{$hackathon->first_description}}
                     </h3>
                     <br />
                     <h5 class="text-dark-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                         <br />
-                        وصف الهاكاثون{{$hackathon->second_description}} ​
+                        {{$hackathon->second_description}} ​
                     </h5>
                     <br />
                     
@@ -160,7 +160,7 @@
                     عن الهاكاثون ​
                 </h2>
                 <h3 class="text-blue wow zoomIn" data-wow-duration="1.3s" data-wow-delay="0.2s" style="padding-top: 50px;">
-                    {{$hackathon->about}} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {{$hackathon->about}}
                 </h3>
             </div>
 
@@ -173,7 +173,7 @@
                 </h2>
                 <h3 class="text-blue" style="padding-top: 50px;">
                     <ul>
-                        <li class="wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="0.5s" style=" padding: 10px;">الجولات{{$hackathon->challanges}} </li>
+                        <li class="wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="0.5s" style=" padding: 10px;">{{$hackathon->challanges}} </li>
                         <li class="wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.5s" style="padding: 10px;">الدليل السياحي</li>
                         <li class="wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="0.5s" style="padding: 10px;">الثقافة و الأثار</li>
                     </ul>
@@ -265,24 +265,27 @@
                     <div class="container" >
                         <div class="row justify-content-center content-row">
                             <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                @foreach ($fields as $field)
+
                                 <div class="single-services text-center mt-30 wow slideInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-1.svg" alt="shape">
+                                        <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
+                                        <img class="shape-1" src="{{asset('img/services-shape-1.svg')}}" alt="shape">
                                         <i class="lni-travel"></i>
                                     </div>
                                     <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون السفر</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                                        <h4 class="services-title"><a href="#">{{$field->name}}</a></h4>
+                                        <p class="text">{{$field->body}}.</p>
                                         <a class="more" href="hackathon.html">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
                                     </div>
                                 </div> <!-- single services -->
                             </div>
+                            @endforeach
                             <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
                                 <div class="single-services text-center mt-30 wow slideInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
+                                        <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
+                                        <img class="shape-1" src="{{asset('img/services-shape-2.svg')}}" alt="shape">
                                         <i class="lni-trees"></i>
                                     </div>
                                     <div class="services-content mt-30">
@@ -295,8 +298,8 @@
                             <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
                                 <div class="single-services text-center mt-30 wow slideInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-3.svg" alt="shape">
+                                        <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
+                                        <img class="shape-1" src="{{asset('img/services-shape-3.svg')}}" alt="shape">
                                         <i class="lni-book"></i>
                                     </div>
                                     <div class="services-content mt-30">
@@ -309,8 +312,8 @@
                             <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
                                 <div class="single-services text-center mt-30 wow slideInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
+                                        <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
+                                        <img class="shape-1" src="{{asset('img/services-shape-2.svg')}}" alt="shape">
                                         <i class="lni-text-format"></i>
                                     </div>
                                     <div class="services-content mt-30">

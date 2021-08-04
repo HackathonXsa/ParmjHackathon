@@ -12,6 +12,34 @@
 @extends('layouts.dash')
 
 @section('content')
+@if (session()->has('popup'))
+<script>
+const { value: formValues } = await Swal.fire({
+  title: 'Multiple inputs',
+  html:
+    '<input id="swal-input1" class="swal2-input">' +
+    '<input id="swal-input2" class="swal2-input">',
+  focusConfirm: false,
+  preConfirm: () => {
+    return [
+      document.getElementById('swal-input1').value,
+      document.getElementById('swal-input2').value
+    ]
+  }
+})
+
+if (formValues) {
+  Swal.fire(JSON.stringify(formValues))
+}
+
+Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})
+</script>
+@endif
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-end me-3 rotate-caret" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -346,10 +374,119 @@
           <label for="challanges">التحديات</label>
           <input type="text" name="challanges" class="form-control" id="challanges" aria-describedby="" placeholder="Enter challanges" value="{{$hackathons->challanges}}">
         </div>
+        
         <button type="submit" class="btn btn-primary">حفظ</button>
-    
+
     </form>
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">إضافة مجال جديد</button>
+    {{-- @if ($fields) --}}
+    </div>
+    <div>
+    <label for="about">المجالات</label>    
+      <table class="table table-borderless">
+        <tr>
+            <th>المجال</th>
+            <th>وصف المجال</th>
+            <th>حذف</th>
+            <th>حفظ التعديلات</th>
+        </tr>
+    @foreach ($fields as $field)
+    <form action="{{route('hackathons.fields.delete', $field->id)}}" method="POST" enctype="multipart/form-data">
+      @csrf
+      @method('DELETE')
+      <input type="submit" id="form-delete" class="invisible"/>
+    </form>
+<form action="{{ route('hackathons.fields.update', $field->id) }}" method="post" enctype="multipart/form-data">
+  @csrf
+  @method('PATCH')
+        <tr>
+            <td>
+              <input type="text" name="name" placeholder="{{ $field->name }}" class="form-control" />
+            </td>
+            <td>
+              <input type="text" name="body" placeholder="{{ $field->body }}" class="form-control" />
+            </td>
+            <td>
+              <label for="form-delete" tabindex="0" class="btn btn-outline-danger btn-block">حذف المجال</label>
+            </td>
+            <td>
+              <button type="submit" class="btn btn-primary">حفظ</button>
+            </td>
+            {{-- <input type="hidden" name="field_id" value="{{$hackathons->hackathon_id}}" /> --}}
+        </tr>
+</form>
+      @endforeach
+      </table>
+    </div>
+    {{-- @endif --}}
+
+    {{-- <form action="{{route('hackathon.page.update', $hackathons->hackathon_id)}}" method="post" enctype="multipart/form-data">
+      @csrf
+        @if ($errors->any())
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        @if (Session::has('success'))
+        <div class="alert alert-success text-center">
+            <p>{{ Session::get('success') }}</p>
+        </div>
+        @endif
+        <table class="table table-borderless" id="dynamicAddRemove">
+            <tr>
+                <th>المجال</th>
+                <th>إضافة\حذف</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="addMoreInputFields[0][name]" placeholder="أدخل المجال" class="form-control" />
+                </td>
+                <td><button type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">إضافة مجال</button></td>
+            </tr>
+        </table>
+        <button type="submit" class="btn btn-outline-success btn-block">Save</button>
+      </form> --}}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">إضافة مجال للهاكاثون</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{{ route('hackathons.fields.store') }}" method="post" enctype="multipart/form-data">
+          @csrf
+          <table class="table table-borderless" id="dynamicAddRemove">
+            <tr>
+                <th>المجال</th>
+                <th>وصف المجال</th>
+                <th>إضافة\حذف</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="addMoreInputFields[0][name]" placeholder="أدخل المجال" class="form-control" />
+                </td>
+                <td><input type="text" name="addMoreInputFields[0][body]" placeholder="أدخل المجال" class="form-control" />
+                </td>
+                <td><button type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">إضافة مجال</button></td>
+                <input type="hidden" name="field_id" value="{{$hackathons->hackathon_id}}" />
+            </tr>
+        </table>
+        <input type="submit" id="submit-form" class="invisible"/>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <label for="submit-form" tabindex="0" class="btn btn-success btn-block">حفظ</label>
+      </div>
+    </div>
+  </div>
 </div>
+  </div>
 
     <!------------------ Footer ---------------->
       <footer class="footer pt-3  ">
@@ -452,4 +589,22 @@
       </div>
     </div>
   </div>
+  <!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+    var i = 0;
+    $("#dynamic-ar").click(function () {
+        ++i;
+        $("#dynamicAddRemove").append('<tr><td><input type="text" name="addMoreInputFields[' + i +
+            '][name]" placeholder="أدخل المجال" class="form-control" /></td><td><input type="text" name="addMoreInputFields[' + i +
+            '][body]" placeholder="أدخل المجال" class="form-control" /></td><td><button type="button" class="btn btn-outline-danger remove-input-field">حذف</button></td></tr>'
+            );
+    });
+    $(document).on('click', '.remove-input-field', function () {
+        $(this).parents('tr').remove();
+    });
+</script>
+
 @endsection
