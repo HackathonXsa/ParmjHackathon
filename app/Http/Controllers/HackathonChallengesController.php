@@ -2,48 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HackathonFields;
+use App\Models\HackathonChallenges;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
-class HackathonFieldsController extends Controller
+class HackathonChallengesController extends Controller
 {
-
+    //
     public function store(Request $request)
     {
         $request->validate([
             'addMoreInputFields.*.name' => 'required',
-            'addMoreInputFields.*.body' => 'required',
-            'field_submition_id' => 'required'
+            'field_id' => 'required'
         ]);
      
         foreach ($request->addMoreInputFields as $key => $value) {
-            HackathonFields::create(['hackathon_id' => $request['field_submition_id'], 'name' => $value['name'], 'body' => $value['body']]);
+            HackathonChallenges::create(['hackathon_id' => $request['field_id'], 'name' => $value['name']]);
         }
      
         return back()->with('success', 'New subject has been added.');
     }
 
-    public function update(HackathonFields $hackathon)
+    public function update(HackathonChallenges $hackathon)
     {
         $inputs = request()->validate([
             'name' => 'required',
-            'body' => 'required'
         ]);
      
         $hackathon->name = $inputs['name'];
-        $hackathon->body = $inputs['body'];
 
         $hackathon->update();
 
-        session()->flash('post-updated-message', 'تم تحديث المجال');
+        session()->flash('post-updated-message', 'تم تحديث التحدي');
         
         return redirect()->route('hackathon.index');
         // return back()->with('success', 'New subject has been added.');
     }
 
-    public function destroy(HackathonFields $hackathon){
+    public function destroy(HackathonChallenges $hackathon){
 
         // $this->authorize('delete', $hackathon);
         $hackathon->delete();
@@ -52,5 +48,4 @@ class HackathonFieldsController extends Controller
 
         return back();
     }
-
 }

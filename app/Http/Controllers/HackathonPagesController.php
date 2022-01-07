@@ -17,9 +17,11 @@ class HackathonPagesController extends Controller
         // $this->authorize('view', $hackathon);
         $id = $hackathon->hackathon_id;
         $name = Hackathon::find($id);
+        $challenge = DB::table('hackathon_challenges')->where('hackathon_id', '=', $id)->get();
         $field = DB::table('hackathon_fields')->where('hackathon_id', '=', $id)->get();
+        $timeline = DB::table('hackathon_timelines')->where('hackathon_id', '=', $id)->get();
 
-        return view('hackathon', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'fields'=>$field]);
+        return view('hackathon', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
     }
 
 
@@ -27,9 +29,11 @@ class HackathonPagesController extends Controller
 
         // $this->authorize('view', $hackathon);
         $id = $hackathon->hackathon_id;
+        $challenge = DB::table('hackathon_challenges')->where('hackathon_id', '=', $id)->get();
         $field = DB::table('hackathon_fields')->where('hackathon_id', '=', $id)->get();
+        $timeline = DB::table('hackathon_timelines')->where('hackathon_id', '=', $id)->get();
 
-        return view('hackathons.pages.edit', ['hackathons'=>$hackathon, 'fields'=>$field]);
+        return view('hackathons.pages.edit', ['hackathons'=>$hackathon, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
     }
 
     public function update(HackathonPages $hackathon){
@@ -37,7 +41,6 @@ class HackathonPagesController extends Controller
             'first_description'=>'required|min:6|max:255',
             'second_description'=>'required',
             'about'=>'required',
-            'challanges'=>'required',
         ]);
         
         // if(request('post_image')){
@@ -47,7 +50,6 @@ class HackathonPagesController extends Controller
         $hackathon->first_description = $inputs['first_description'];
         $hackathon->second_description = $inputs['second_description'];
         $hackathon->about = $inputs['about'];
-        $hackathon->challanges = $inputs['challanges'];
 
         // $this->authorize('update', $hackathon);
 

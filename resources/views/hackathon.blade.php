@@ -173,7 +173,9 @@
                 </h2>
                 <h3 class="text-blue" style="padding-top: 50px;">
                     <ul>
-                        <li class="wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="0.5s" style=" padding: 10px;">{{$hackathon->challanges}} </li>
+                        @foreach ($challenges as $challenge)
+                            <li class="wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="0.5s" style=" padding: 10px;">{{$challenge->name}} </li>
+                        @endforeach
                         <li class="wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.5s" style="padding: 10px;">الدليل السياحي</li>
                         <li class="wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="0.5s" style="padding: 10px;">الثقافة و الأثار</li>
                     </ul>
@@ -262,11 +264,31 @@
                 </div> -->
 
                 <section id="features" class="services-area p-t-30" >
+                    <p style="display: none">{{$a=0}}</p>
                     <div class="container" >
                         <div class="row justify-content-center content-row">
+                            @foreach ($fields as $field)
+                            @if ($a!=0 && 0 == $a%4)
+                                </div> <!-- row -->
+                                <div class="row justify-content-center content-row pt-3">
+                                <p style="display: none">{{$a++}}</p>
+                                <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                                        <div class="single-services text-center mt-30 wow slideInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                            <div class="services-icon">
+                                                <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
+                                                <img class="shape-1" src="{{asset('img/services-shape-1.svg')}}" alt="shape">
+                                                <i class="lni-travel"></i>
+                                            </div>
+                                            <div class="services-content mt-30">
+                                                <h4 class="services-title"><a href="#">{{$field->name}}</a></h4>
+                                                <p class="text">{{$field->body}}.</p>
+                                                <a class="more" href="hackathon.html">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
+                                            </div>
+                                        </div> <!-- single services -->
+                                </div>
+                            @else
+                            <p style="display: none">{{$a++}}</p>
                             <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
-                                @foreach ($fields as $field)
-
                                 <div class="single-services text-center mt-30 wow slideInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="services-icon">
                                         <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
@@ -280,8 +302,9 @@
                                     </div>
                                 </div> <!-- single services -->
                             </div>
+                            @endif
                             @endforeach
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
+                            {{-- <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 30vh;">
                                 <div class="single-services text-center mt-30 wow slideInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="services-icon">
                                         <img class="shape" src="{{asset('img/services-shape.svg')}}" alt="shape">
@@ -322,7 +345,7 @@
                                         <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
                                     </div>
                                 </div> <!-- single services -->
-                            </div>
+                            </div> --}}
                         </div> <!-- row -->
                     </div> <!-- container -->
                 </section>
@@ -386,29 +409,31 @@
                           <div class="timeline__new">
                             <!--timeline bar-->
                             <div class="timeline__bar"></div>
+                            @foreach ($timelines as $timeline)
                             <!--timeline element-->
-                            <div class="timeline__elem timeline__elem--left">
+                            <div class="timeline__elem timeline__elem--{{$timeline->position}}">
                               <!--timeline element date-->
-                              <div class="timeline__date"><span class="timeline__date-day">10</span><span class="timeline__date-month">Jul</span></div>
+                              <div class="timeline__date"><span class="timeline__date-day">{{ date('j', strtotime($timeline->date))}}</span><span class="timeline__date-month">{{ date('M', strtotime($timeline->date))}}</span></div>
                               <!--timeline event-->
                               <div class="timeline__event wow fadeInLeft">
                                 <!--timeline event full date and time-->
                                 <div class="timeline__event-date-time">
-                                  <div class="timeline__event-date"> <span>10/07/2019</span></div>
-                                  <div class="timeline__event-time"><span>12:30</span></div>
+                                  <div class="timeline__event-date"> <span>{{$timeline->date}}</span></div>
+                                  <div class="timeline__event-time"><span></span></div>
                                 </div>
                                 <!--timeline event title-->
-                                <h4 class="timeline__event-title">JS meetup</h4>
+                                <h4 class="timeline__event-title">{{$timeline->name}}</h4>
                                 <!--timeline event descrtiption-->
                                 <div class="timeline__event-descr">
-                                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                  <p>{{$timeline->body}} . This is a text field that is generated to test the font and view it in order to make adjusments, This is a text field that is generated to test the font and view it in order to make adjusments</p>
                                 </div>
                                 <!--timeline event actions links-->
                                 <div class="timeline__event-actions"><a class="timeline__event-action" href="#" title="Learn More">لمعرفة المزيد</a><a class="timeline__event-action" href="#" title="Contact Us">تواصل معنا</a></div>
                               </div>
                             </div>
+                            @endforeach
                             <!--timeline element-->
-                            <div class="timeline__elem timeline__elem--right">
+                            {{-- <div class="timeline__elem timeline__elem--right">
                               <!--timeline element date-->
                               <div class="timeline__date"><span class="timeline__date-day">18</span><span class="timeline__date-month">Jul</span></div>
                               <!--timeline event-->
@@ -492,7 +517,7 @@
                                 <!--timeline event actions links-->
                                 <div class="timeline__event-actions"><a class="timeline__event-action" href="#" title="Learn More">لمعرفة المزيد</a><a class="timeline__event-action" href="#" title="Contact Us">تواصل معنا</a></div>
                               </div>
-                            </div>
+                            </div> --}}
                           </div>
                         </div>
                       </div>
