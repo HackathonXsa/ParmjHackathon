@@ -1,499 +1,196 @@
 <!DOCTYPE html>
 <html lang="ar">
-    <head>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta name="description" content="Hackathon">
-        
-        <link href="{{ asset('img/hack-logo-new.png') }}" rel="shortcut icon" />
-        <title>هاكاثون برمج</title>
-
-        <!-- CSS files -->
-
-        <!-- Bootstrap core CSS -->
-        <link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
-
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-        <!-- Custom bootstrap CSS  -->
-        <link href="{{ asset('css/bootstrap/carousel.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap/pricing.css') }}" rel="stylesheet">
-
-        <!-- animsition library -->
-        <!-- <link rel="stylesheet" href="css/animsition/animsition.min.css">
-        <script src="css/animsition/animsition.js"></script> -->
-
-        <!-- Custom hackathon CSS -->
-        <link href="{{ asset('css/hackathon.css') }}" rel="stylesheet">
-        <!-- <link href="css/styles.css" rel="stylesheet"> -->
-
-        <!-- Custom liabrary -->
-        <!-- <link rel="stylesheet" href="css/hover/hover-min.css"> -->
-
-        <!-- animation CSS -->
-        <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-
-        <!-- Icons CSS -->
-        <link rel="stylesheet" href="{{ asset('css/LineIcons.css') }}">
-
-        <!-- Other CSS -->
-        <link href="{{ asset('css/util.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
-        <!-- <script>
-            $(document).ready(function () {
-                $('.animsition').animsition();
-                //====== Frames ========
-    
-                //mainFrame
-                $('.animsition-main').animsition({
-                    inClass: 'zoom-in-sm',
-                    outClass: 'zoom-out-sm'
-                });
-    
-                $('.animsition-zoom').animsition({
-                    inClass: 'zoom-in-sm',
-                    outClass: 'zoom-out-sm'
-                });
-    
-                $('.animsition-fade-up').animsition({
-                    inClass: 'fade-in-up-sm',
-                    outClass: 'fade-out-up-sm'
-                });
-    
-                $('.animsition-fade-right').animsition({
-                    inClass: 'fade-in-right-sm',
-                    outClass: 'fade-out-right-sm'
-                });
-    
-                $('.animsition-fade-left').animsition({
-                    inClass: 'fade-in-left-sm',
-                    outClass: 'fade-out-left-sm'
-                });
-    
-                $('.animsition-fade-up').animsition({
-                    inClass: 'fade-in-up-lg',
-                    outClass: 'fade-out-up-lg'
-                });
-    
-            });
-        </script> -->
-        
-
-    </head>
-    
-    <body class="animsition animsition-main body-bg" id="main-page">
-
-        <!-- The site header -->
-        <header>
-            <!-- Navigation -->
-            <nav>
-                <input id="nav-toggle" type="checkbox">
-                <div class="logo">
-                    <a href="{{route('home.index')}}">
-                        <img src="{{ asset('img/hack-logo-new.png') }}"  width="170px" height="10px"> 
-                    </a>  
-                </div>
-                <ul class="links">
-                    <li><a href="#main-page">الرئيسية</a></li>
-                    <li ><a href="#hackathons">الهاكاثونات</a></li>
-                    <li ><a href="#timeline">التقويم</a></li>
-                    @if(Auth::check())
-                    <li id="login" ><a href="{{route('dashboard')}}">لوحة التحكم</a></li>
-                    @else
-                    <li id="login" ><a href="{{route('login')}}">تسجيل الدخول</a></li>
-                    <li id="register" ><a href="{{route('register')}}">تسجيل</a></li>
-                    @endif
-                </ul>
-    
-                <label for="nav-toggle" class="icon-burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </label>
-            </nav>
-        </header>
-
-        <script type="text/javascript">
-            window.addEventListener("scroll", function(){
-                var header = document.querySelector("nav");
-                header.classList.toggle("sticky", window.scrollY > 0);
-            })
-        </script>
-
-        
-        <!-- The site content -->
-
-            <!-- مقدمة عن الهاكاثون -->
-            <div class="jumbotron text-right custom-bg-img banner banner-bg" id="main-page" style="background-image: url('img/banner-bg-svg.svg');" >
-                <div class="container custom-bg-color animsition-zoom" >
-                    <h1 class="text-dark-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="font-size: 4em; padding-top: 100px;">
-                       هاكاثون برمج
-                    </h1>
-                    <h3 class="text-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s" style="padding-top: 50px;">
-                        مجموعة من المسابقات البرمجية التي تقيمها جمعية مبرمجين 
-                    </h3>
-                    <br />
-                    <h5 class="text-dark-blue wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">
-                        <br />
-                        تهدف الى تحسين وتطوير العديد من المجالات في الجوانب المجتمعية  ​
-                    </h5>
-                    <br />
-                    
-                </div>
-                <div id="particles-1" class="particles"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <title>هاكاثون برمج</title>
+</head>
+<body dir="rtl">
+    <header>
+        <div class="logo-holder">
+            <div class="logo">
+                <img src="{{ asset('assets/Untitled_design-13@2x.png') }}" alt="logo">
             </div>
-        
-        <div class="site-content"> 
-
-            <!-- الهاكاثونات -->
-            <div class="jumbotron text-center album py-5 custom-bg-img animsition-fade-up" id="hackathons">
-
-                <div class="container custom-bg-color ">
-                    <h2 class="text-white" style="padding: 50px 0;">
-                        <i class="fa wow " aria-hidden="true"></i>
-                        الهاكاثونات
-                    </h2>
-                    
-                    <br />
+        </div>
+        <nav>            
+            <ul class="links">
+                <li class="active">
+                    <a href="#">الرئيسية</a>
+                </li>
+                <li>
+                    <a href="#">الهاكثونات</a>
+                </li>
+                <li>
+                    <a href="#">التقويم</a>
+                </li>
+                <li>
+                    <a href="#">الأسئلة الشائعة</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container justify-content-md-center intro">
+        <div class="intro-img"></div>
+            <div class="intro-body">
+                <div class="container justify-content-md-center content">
+                    <div class="row justify-content-md-center title">هاكثون برمج</div>
+                    <div class="row justify-content-md-center subtitle">عام كامل من المسابقات البرمجية برعاية من جمعية المبرمجين</div>
+                    <div class="row justify-content-md-center second-subtitle">أطلق قدراتك ومهاراتك في المكان المناسب</div>
+                    <button type="row justify-content-md-center button" class="btn btn-primary btn-lg join-us">انضم لنا الان</button>
                 </div>
-
-                <!-- Row One -->
-                <!-- <div class="row ">
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-                                
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون السفر
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون الزراعة
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون الثقافة
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون اللغات
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- Row Two -->
-                <!-- <div class="row ">
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="1.4s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون الصحة النفسية
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="1.7s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون حقوق الإنسان
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md wow fadeIn" data-wow-duration="1s" data-wow-delay="2.0s">
-                        <div class="card mb-4 shadow-sm hvr-grow" style="min-height: 30vh; min-width: 30vh;">
-                            <div class="card-body text-center">
-                                <h1 class="text-blue">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                </h1>
-                                <img src="img/logo.png"  width="100px" height="10px"> 
-
-                                <h4 class="card-text text-dark-blue" style="padding-top: 50px;">
-                                    هاكاثون الخدمة العامة والمجتمعية
-                                </h4>
-
-                                <h5 class="text-dark-blue">وصف مختصر للهاكاثون</h5>
-
-                                <button class="btn-signup" type="button" onclick="location.href='hackathon.html'">
-                                    لمعرفة المزيد
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                
-                </div> -->
-
-                <section id="features" class="services-area p-t-30" >
-                    <p style="display: none">{{$a=0}}</p>
-                    <div class="container" >
-                        <div class="row justify-content-center content-row">
-                            
-                            @foreach ($hackathons as $hackathon)
-                            @if ($a!=0 && 0 == $a%4)
-                                </div> <!-- row -->
-                                <div class="row justify-content-center content-row pt-3">
-                                <p style="display: none">{{$a++}}</p>
-                                <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                                        <div class="services-icon">
-                                            <img class="shape" src="img/services-shape.svg" alt="shape">
-                                            <img class="shape-1" src="img/services-shape-1.svg" alt="shape">
-                                            <i class="{{$hackathon->hackathon_image}}"></i>
-                                        </div>
-                                        <div class="services-content mt-30">
-                                            <h4 class="services-title"><a href="#">{{$hackathon->name}}</a></h4>
-                                            <p class="text">.{{$hackathon->body}}</p>
-                                            <a class="more" href="{{ route('home.hackathon') }}">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                        </div>
-                                    </div> <!-- single services -->
-                                </div>
-                            @else
-                            <p style="display: none">{{$a++}}</p>
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-1.svg" alt="shape">
-                                        <i class="{{$hackathon->hackathon_image}}"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">{{$hackathon->name}}</a></h4>
-                                        <p class="text">.{{$hackathon->body}}</p>
-                                        <a class="more" href="{{ route('home.hackathon', $hackathon->id) }}">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div>
-                            @endif
-                            @endforeach
-                            {{-- <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
-                                        <i class="lni-trees"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون الزراعة</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div>
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-3.svg" alt="shape">
-                                        <i class="lni-book"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون الثقافة</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div>
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
-                                        <i class="lni-text-format"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون اللغات</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div> --}}
-                        </div> <!-- row -->
-                        {{-- <div class="row justify-content-center content-row pt-3">
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-3.svg" alt="shape">
-                                        <i class="lni-thought"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون الصحة النفسية</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div>
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-1.svg" alt="shape">
-                                        <i class="lni-hand"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون حقوق الإنسان</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div>
-                            <div class="col-lg-2 col-md-7 col-sm-1 mt-2" style="min-height: 30vh; min-width: 35vh;">
-                                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                                    <div class="services-icon">
-                                        <img class="shape" src="img/services-shape.svg" alt="shape">
-                                        <img class="shape-1" src="img/services-shape-2.svg" alt="shape">
-                                        <i class="lni-users"></i>
-                                    </div>
-                                    <div class="services-content mt-30">
-                                        <h4 class="services-title"><a href="#">هاكاثون الخدمة العامة والمجتمعية</a></h4>
-                                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                        <a class="more" href="#">لمعرفة المزيد<i class="lni-chevron-left"></i></a>
-                                    </div>
-                                </div> <!-- single services -->
-                            </div>
-                        </div> <!-- row --> --}}
-                    </div> <!-- container -->
-                </section>
-
-            </div><!-- /.jumbotron -->
-
-            <!-- الخط الزمني -->
-            <!-- We can use an image rather than table for timeline -->
-            <div class="container marketing" id="timeline" style="padding-bottom: 100px;">
-
-                <hr class="featurette-divider">
-
-                <h2 class="text-white"> TimeLine </h2>
-
-            </div> <!-- /.container -->
-         
-
-
-            <div class="footer-basic">
-                <footer>
-                    <!-- All rights reserved Social medias -->
-                    <div class="social">
-                        <!--<a href="#"><i class="icon ion-social-instagram"></i></a>-->
-                        <!--<a href="#"><i class="icon ion-social-snapchat"></i></a>-->
-                        <a href="https://twitter.com/hackathon_x"><i class="icon ion-social-twitter"></i></a>
-                        <!--<a href="#"><i class="icon ion-social-facebook"></i></a>-->
-                    </div>
-                   
-                    <p class="copyright">HackathonX 2021</p>
-                </footer>
             </div>
-
-        </div> 
-
-        <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-        <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('js/faqs.js') }}"></script>
-
-        <!--====== wow js ======-->
-        <script src="{{ asset('js/wow.min.js') }}"></script>
-
-            <!--====== Jquery js ======-->
-        <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
-        <script src="{{ asset('js/vendor/modernizr-3.7.1.min.js') }}"></script>
-
-            <!--====== Particles js ======-->
-        <script src="{{ asset('js/particles.min.js') }}"></script>
+    </section>
+    <section class="fields">
+        <p style="display: none">{{$a=0}}</p>
+        <div class="fields-body">
+            <div class="fields-title">مجالات الهاكاثونات</div>
+            <div class="fields-code"></div>
+            <div class="row justify-content-center fields-content">
+                @foreach ($hackathons as $hackathon)
+                @if ($a!=0 && 0 == $a%4)
+                    </div> <!-- row -->
+                    <div class="row justify-content-center fields-content">
+                        <p style="display: none">{{$a++}}</p>
+                        <div class="col-md-4 field-element">
+                            <div class="row justify-content-md-center">
+                                <div class="field-element-image"><img src="/assets/social-care.png" alt=""></div>
+                            </div>
+                            <div class="row justify-content-md-center">
+                                <div class="element-text">{{$hackathon->name}}</div>
+                            </div>
+                        </div>
+                @else
+                    <p style="display: none">{{$a++}}</p>
+                    <div class="col-md-4 field-element">
+                        <div class="row justify-content-md-center">
+                            <div class="field-element-image"><img src="/assets/social-care.png" alt=""></div>
+                        </div>
+                        <div class="row justify-content-md-center">
+                            <a href="{{ route('home.hackathon', $hackathon->id) }}"><div class="element-text">{{$hackathon->name}}</div></a>
+                        </div>
+                    </div>
+                @endif
+                @endforeach
+                {{-- <div class="col-md-4 field-element">
+                    <div class="row justify-content-md-center">
+                        <!-- Can use align items center with d-flex instead of this -->
+                        <div class="field-element-image">d</div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-md element-text">السفر والسياحة</div>
+                    </div>
+                </div>
+                <div class="col-md-4 field-element">
+                    <div class="row justify-content-md-center">
+                        <div class="field-element-image">d</div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col element-text">السفر والسياحة</div>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </section>
+    <section class="timeline">
+        <div class="timeline-body">
+            <div class="timeline-title">الجدول الزمني</div>
+            <!---row-->
+            <div class="row timeline-elements-container justify-content-md-center">
+                <!---Timeline element-->
+                <div class="col-md-2 text-center">
+                    <div class="row justify-content-md-center">
+                    <div class="timeline-element-title">المرحلة الأولى</div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                    <div class="timeline-element-desc">الإعلان عن المبادرة</div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                    <div class="timeline-element-date">Sep, 1 2021</div>
+                    </div>
+                </div> <!---end timeline element-->
+                <div class="col-md-1 timeline-seperator"></div>
+                <!---Timeline element-->
+                <div class="col-md-2 text-center">
+                    <div class="row justify-content-md-center">
+                    <div class="timeline-element-title">المرحلة الثانية</div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                    <div class="timeline-element-desc">استقبال المستثمرين والشركاء</div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                    <div class="timeline-element-date">Sep, 1 2021</div>
+                    </div>
+                </div><!---end timeline element-->
+                <div class="col-md-1 timeline-seperator"></div>
+                <!---Timeline element-->
+                <div class="col-md-2 text-center">
+                    <div class="timeline-element-title">المرحلة الثالثة</div>
+                    <div class="timeline-element-desc">الحملات الإعلانية للهاكثونات</div>
+                    <div class="timeline-element-date">Sep, 1 2021</div>
+                </div> <!---end timeline element-->
+                <div class="col-md-1 timeline-seperator"></div>
+                <!---Timeline element-->
+                <div class="col-md-2 text-center">
+                    <div class="timeline-element-title">المرحلة الرابعة</div>
+                    <div class="timeline-element-desc">إطلاق الهاكثونات</div>
+                    <div class="timeline-element-date">Sep, 1 2021</div>
+                </div><!---end timeline element-->
+            </div><!---end row-->
+        </div>
+    </section>
+    <section class="sponsors">
+        <div class="sponsors-body container-fluid">
+            <div class="sponsors-title">الشركاء</div>
+            <div class="row justify-content-md-center sponsors-logo-container">
+                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
+                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
+                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
+                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-join">
+        <div class="row align-items-start blue-join-body">
+            <div class="col join-text">اطلق قدراتك ومهاراتك في المكان المناسب</div>
+            <div class="col"><button type="button" class="btn btn-primary btn-lg join-us-blue">انضم لنا الان</button></div>
+        </div>
+    </section>
+    <!-- Side nav -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">الرئيسية</a>
+        <a href="#">الهاكثونات</a>
+        <a href="#">التقويم</a>
+        <a href="#">الأسئلة الشائعة</a>
+        <a href="#">تسجيل الدخول</a>
+    </div>
+      <span class="sidebtn" onclick="openNav()">&#9776;</span>
+    <footer>
+        <div class="footer-body">
+            <div class="footer-code"></div>
+            <div class="rights">جميع الحقوق محفوظة لهاكثون اكس 2022</div>
+            <div class="contact">
+                <div class="row justify-content-md-center">
+                    <div class="col-1 twitter"></div>
+                    <div class="col-1 telephone"></div>
+                    <div class="col-2 telephone-text">0505012345</div>
+                    <div class="col-2 email"></div>
+                    <div class="col-2 email-text">test@test.com</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
         
-        <!-- main js -->
-
-        <script src="{{ asset('js/main.js') }}"></script>
-
-        
-    </body>
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
 </html>
