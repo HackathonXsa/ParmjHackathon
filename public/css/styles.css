@@ -24,8 +24,8 @@ header {
     padding: 20px;
     top: 0px;
     left: 0px;
-    width: 1920px;
-    width: auto !important;
+    /* width: 1920px; */
+    width: 100% !important;
     height: 96px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 0.84;
@@ -304,7 +304,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
+    /* position: absolute; */
     top: 97px;
     height: 985px;
     display: flex;
@@ -409,7 +409,8 @@ body{
 }
 .fields-body{
     margin-top: 107px;
-    width: 1920px;
+    /* width: 1920px; */
+    width: 100%;
     text-align: center;
 }
 .fields-title{
@@ -507,7 +508,8 @@ body{
 .timeline-body{
     margin-top: 112px;
     margin-bottom: 40px;
-    width: 1920px;
+    /* width: 1920px; */
+    width: 100%;
     text-align: center;
 }
 .timeline-title{
@@ -647,7 +649,8 @@ footer{
     display: flex;
     position: relative;
     top: 1363px;
-    width: 1920px;
+    /* width: 1920px; */
+    width: 100%;
     height: 92px;
     background: rgba(239, 239, 239, 0.4) 0% 0% no-repeat padding-box;
 }

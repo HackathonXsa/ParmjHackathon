@@ -32,7 +32,7 @@
             </ul>
         </nav>
     </header>
-    <section class="container justify-content-md-center intro">
+    <section class="container justify-content-md-center intro mx-auto">
         <div class="intro-img"></div>
             <div class="intro-body">
                 <div class="container justify-content-md-center content">
