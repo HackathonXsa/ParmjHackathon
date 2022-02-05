@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('OwlCarousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('OwlCarousel/assets/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>هاكاثون برمج</title>
 </head>
 <body dir="rtl">
@@ -145,10 +148,36 @@
         <div class="sponsors-body container-fluid">
             <div class="sponsors-title">الشركاء</div>
             <div class="row justify-content-md-center sponsors-logo-container">
+                    {{-- <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
                     <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
                     <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
-                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
-                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div>
+                    <div class="col-3 sponsors-logo"><img src="/assets/partner-logo.png" alt="Partner logo"></div> --}}
+            </div>
+            <div class="owl-carousel">
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/mcit-logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/mcit-logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/mcit-logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/logo.png') }}">
+                </div>
+                <div class="item sponsorship-item d-flex align-items-center">
+                    <img src="{{ asset('assets/mcit-logo.png') }}">
+                </div>
             </div>
         </div>
     </section>
@@ -184,6 +213,35 @@
         </div>
     </footer>
     <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                rtl: true,
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                dots: false,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    400: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            })
+        });
+
+    </script>
+    <script>
         function openNav() {
           document.getElementById("mySidenav").style.width = "250px";
         }
@@ -192,5 +250,9 @@
           document.getElementById("mySidenav").style.width = "0";
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="{{ asset('OwlCarousel/owl.carousel.min.js') }}"></script>
 </body>
 </html>
