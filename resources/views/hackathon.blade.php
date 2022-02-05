@@ -620,7 +620,7 @@
     </div>
     <div class="join-us accent-sec-bg py-5 px-5 d-flex justify-content-center align-items-center">
         <div class="d-flex flex-sm-row flex-column align-items-center">
-            <p class="fs-5 me-sm-5 mb-sm-0">اطلق قدراتك وانضم لهاكثون السفر</p>
+            <p class="fs-5 text-center me-sm-5 mb-sm-0">اطلق قدراتك وانضم لهاكثون السفر</p>
             <button type="button" class="btn btn-primary btn-lg join-us-blue ms-sm-5 py-3">انضم لنا الان</button>
         </div>
     </div>
@@ -652,7 +652,7 @@
                 margin: 10,
                 autoplay: true,
                 dots: false,
-                autoplayTimeout: 10000,
+                autoplayTimeout: 5000,
                 autoplayHoverPause: true,
                 responsive: {
                     0: {
