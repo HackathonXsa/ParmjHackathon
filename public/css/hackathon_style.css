@@ -186,7 +186,15 @@ a {
     }
 }
 
-
+@font-face {
+    font-family: '29LT Bukra';
+    src: url('../fonts/alfont_com_AlFont_com_4_C7.ttf') format('truetype');
+}
+@font-face {
+    font-family: '29LT Bukra';
+    src: url('../fonts/alfont_com_AlFont_com_4_C9.ttf') format('truetype');
+    font-weight: bold;
+}
 
 body {
     font-family: '29LT Bukra', sans-serif !important;
