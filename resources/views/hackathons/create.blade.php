@@ -332,6 +332,10 @@
             <label for="hackathon_image">أيقونة الهاكاثون</label>
             <input type="text" name="hackathon_image" class="form-control" id="hackathon_image" aria-describedby="" placeholder="ايقونة الهاكاثون">
         </div>
+        <div class="form-group">
+            <label for="date">تاريخ</label>
+            <input type="datetime-local" name="date" class="form-control" id="date" aria-describedby="" placeholder="تاريخ">
+        </div>
         {{-- <div class="form-group">
             <div><img height="100px" src="{{$hackathons->hackathon_image}}" alt=""></div>
             <label for="file">File</label>

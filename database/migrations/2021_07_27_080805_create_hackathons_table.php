@@ -19,6 +19,7 @@ class CreateHackathonsTable extends Migration
             $table->string('name');
             $table->text('hackathon_image')->nullable();
             $table->text('body');
+            $table->dateTime('date');
             $table->timestamps();
         });
     }

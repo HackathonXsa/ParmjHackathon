@@ -9,7 +9,7 @@ class Hackathon extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'hackathon_image', 'body'];
+    protected $fillable = ['name', 'hackathon_image', 'body', 'date'];
 
     public function user(){
 

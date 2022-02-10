@@ -25,10 +25,10 @@ class HackathonController extends Controller
         // $this->authorize('create', Hackathon::class);
 
         $inputs = request()->validate([
-            'name'=>'required|min:6|max:255',
+            'name'=>'required|min:1|max:255',
             'hackathon_image'=>'required',
-            'body'=>'required'
-
+            'body'=>'required',
+            'date'=> 'required'
 
         ]);
 

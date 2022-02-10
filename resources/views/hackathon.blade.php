@@ -132,7 +132,7 @@
                         <span class="font-bold">تاريخ الانطلاق</span>
                         <br>
                         <!-- date -->
-                        <span>20/03/2022</span>
+                        <span>{{date('d/m/Y', strtotime($namehacka->date));}}</span>
                     </div>
                 </div>
                 <div class="d-flex flex-row my-2">
@@ -608,7 +608,7 @@
     </script>
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("2022-03-20 00:00:00").getTime();
+        var countDownDate = new Date("{{ $namehacka->date }}").getTime();
 
         var x = setInterval(function() {
             var now = new Date().getTime();
