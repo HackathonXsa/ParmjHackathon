@@ -40,26 +40,28 @@
     </div>
     <span class="sidebtn" onclick="openNav()">&#9776;</span>
 
-    <div class="container d-flex justify-content-center mt-5 py-5">
-        <div class="card" style="width: 24rem;">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-3">تسجيل الدخول</h5>
-              <form>
-                <div class="mb-3">
-                  <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
-                  <input type="email" placeholder="email@domain.com" class="form-control" id="InputEmail">
+    <div class="sign-bg">
+        <div class="d-flex justify-content-center py-5">
+            <div class="card" style="width: 24rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-center mb-3">تسجيل الدخول</h5>
+                  <form>
+                    <div class="mb-3">
+                      <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
+                      <input type="email" placeholder="email@domain.com" class="form-control" id="InputEmail">
+                    </div>
+                    <div class="mb-3">
+                      <label for="InputPassword" class="form-label">كلمة المرور</label>
+                      <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPassword">
+                    </div>
+                    <div class="mb-3">
+                      <span>ليس لديك حساب؟ <a href="{{URL::route('signup')}}">سجل</a></span>
+                    </div>
+                    <button type="submit" class="btn accent-main-bg">دخول</button>
+                  </form>
                 </div>
-                <div class="mb-3">
-                  <label for="InputPassword" class="form-label">كلمة المرور</label>
-                  <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPassword">
-                </div>
-                <div class="mb-3">
-                  <span>ليس لديك حساب؟ <a href="#">سجل</a></span>
-                </div>
-                <button type="submit" class="btn accent-main-bg">دخول</button>
-              </form>
-            </div>
-          </div>
+              </div>
+        </div>
     </div>
 
 

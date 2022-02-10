@@ -62,7 +62,7 @@
                     <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPasswordConfirm">
                   </div>
                 <div class="mb-3">
-                  <span>لديك حساب؟ <a href="#">سجل الدخول</a></span>
+                  <span>لديك حساب؟ <a href="{{URL::route('signin')}}">سجل الدخول</a></span>
                 </div>
                 <button type="submit" class="btn accent-main-bg">تسجيل</button>
               </form>

@@ -363,3 +363,8 @@ a {
 footer{
     background: transparent url('/assets/coding.svg') 100% 0% no-repeat padding-box;
 }
+
+.sign-bg{
+    height: calc(100vh - 80px);
+    background: transparent url('/assets/Mask_Group_17.png') 100% 0% no-repeat padding-box;
+}

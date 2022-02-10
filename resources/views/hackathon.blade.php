@@ -42,7 +42,7 @@
         <a href="#">الهاكثونات</a>
         <a href="#">التقويم</a>
         <a href="#">الأسئلة الشائعة</a>
-        <a href="#">تسجيل الدخول</a>
+        <a href="{{URL::route('signin')}}">تسجيل الدخول</a>
     </div>
     <span class="sidebtn" onclick="openNav()">&#9776;</span>
     <!--
@@ -554,7 +554,7 @@
     <div class="join-us accent-sec-bg py-5 px-5 d-flex justify-content-center align-items-center">
         <div class="d-flex flex-sm-row flex-column align-items-center">
             <p class="fs-5 text-center me-sm-5 mb-sm-0">اطلق قدراتك وانضم لهاكثون السفر</p>
-            <a href="{{URL::route('signup')}}">
+            <a href="#">
                 <button type="button" class="btn btn-primary btn-lg join-us-blue ms-sm-5 py-3">انضم لنا الان</button>
             </a>
         </div>
