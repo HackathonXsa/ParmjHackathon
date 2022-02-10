@@ -28,6 +28,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/{hackathon}/hackathon', [HackathonPagesController::class, 'home'])->name('home.hackathon');
 
+Route::get('/signin', function () {
+    return view('signin');
+})->name('signin');
+Route::get('/signup', function () {
+    return view('signup');
+})->name('signup');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

@@ -1,3 +1,4 @@
+/*
 header {
     display: flex;        
     height: 10px;
@@ -39,17 +40,30 @@ a {
     max-width:45%;
     max-height:45%;
     /* top:10%; */
+    /*
     left:70%;
 }
 .logo img{
     /* width: 70%;
     position: relative;
     bottom: 90px; */
+    /*
     position: relative;
     max-width:70%;
     max-height:100%;
     /* margin-top:-50%; */
+    /*
     margin-left:-50%;
+}
+*/
+
+.logo{
+    height: 80px;
+}
+.logo img{
+    object-fit: contain;
+    width: 160px;
+    height: 80px;
 }
 .sidenav {
     height: 100%;
@@ -62,42 +76,43 @@ a {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
+}
   
-  .sidenav a {
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: white;
     display: block;
     transition: 0.3s;
-  }
+}
   
-  .sidenav a:hover {
+.sidenav a:hover {
     color: #f1f1f1;
-  }
+}
   
-  .sidenav .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     left: 0px;
     font-size: 36px;
     margin-right: 50px;
-  }
-  span.sidebtn{
-      display: none;
-      position: absolute;
-      top: 25px;
-      right: 25px;
-      font-size:30px;
-      cursor:pointer;
-      z-index: 0;
-  }
+}
+span.sidebtn{
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size:30px;
+    cursor:pointer;
+    z-index: 0;
+}
   
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
+
 @media screen and (max-width: 767px) {
 
     nav {
@@ -106,66 +121,11 @@ a {
     span.sidebtn{
         display: block;
     }
-    .logo{
-        position:absolute;
-        max-width:45%;
-        max-height:45%;
-        /* top:6%; */
-        left: unset;
+    .signin{
+        display: none;
     }
-    .logo img{
-        width: 70%;
-        max-width: 75%;
-        position: relative;
-        /* bottom: 90px; */
-        position: relative;
-        /* max-width:100%; */
-        max-height:100%;
-        /* margin-top:-50%; */
-        margin-left:-50%;
-        margin-right: 15%
-    }
-    /* nav{
-        flex: 1;
-    }
-	nav .links {
-		float: none;
-		position: fixed;
-		z-index: 3;
-		left: 0;
-		right: 0;
-		top: 100px;
-		bottom: 100%;
-		width: 100%;
-		height: auto;
-		flex-direction: column;
-		justify-content: space-evenly;
-		background-color: rgba(0,0,0,.8);
-		overflow: hidden;
-		box-sizing: border-box;
-		transition: all .5s ease-in-out;
-	}
-	nav .links a {
-        color: white;
-		font-size: 20px;
-	}
-	nav :checked ~ .links {
-		bottom: 0;
-	}
-	nav .icon-burger {
-		display: block;
-	}
-	nav :checked ~ .icon-burger .line:nth-child(1) {
-		transform: translateY(10px) rotate(225deg);
-	}
-	nav :checked ~ .icon-burger .line:nth-child(3) {
-		transform: translateY(-10px) rotate(-225deg);
-	}
-	nav :checked ~ .icon-burger .line:nth-child(2) {
-		opacity: 0;
-	} */
-	
 }
+
 @media screen and (max-width: 1200px) {
     span.sidebtn{
         display: block;
@@ -173,18 +133,20 @@ a {
     nav {
         display: none;
     }
+    .signin{
+        display: none;
+    }
 }
-
+/*
 @media screen and (min-width: 768px) and (max-width:1200px){
     .logo{
-        /* top: 80px;
-        right: 90px; */
         left: unset;
     }
     .logo img{
         margin-right: 20%
     }
 }
+*/
 
 @font-face {
     font-family: '29LT Bukra';
@@ -218,6 +180,10 @@ a {
 .accent-main-bg{
     color: white;
     background-color: #30ADBE;
+}
+.accent-main-bg:hover{
+    background-color: #0E273B;
+    color: white;
 }
 .accent-sec{
     color: #0E273B;
