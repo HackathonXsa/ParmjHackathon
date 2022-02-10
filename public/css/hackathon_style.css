@@ -252,7 +252,8 @@ a {
 }
 @media (min-width: 576px) { 
     .terms {
-        max-width: 80%;
+        width: 80%;
+        max-width: 1200px;
     }
 }
 .terms-item{

@@ -332,7 +332,7 @@
     </div>
     <br>
     <section class="timeline">
-        <div class="timeline-body">
+        <div class="timeline-body mx-auto">
             <div class="timeline-title">الجدول الزمني</div>
             <!---row-->
             <div class="row g-0 timeline-elements-container justify-content-md-center">
