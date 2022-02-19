@@ -211,7 +211,7 @@ a {
     max-width: 100%;
 }
 
-@media (min-width: 576px) { 
+@media screen and (min-width: 576px) { 
     .container-custom-main {
         max-width: 50%;
     }
@@ -220,7 +220,7 @@ a {
     border-radius: 20px;
     max-width: 90%;
 }
-@media (min-width: 576px) { 
+@media screen and (min-width: 576px) { 
     .container-custom-main {
         max-width: 600px;
     }
@@ -241,7 +241,7 @@ a {
     max-width: 250px;
     right: 80%;
 }
-@media (min-width: 576px) { 
+@media screen and (min-width: 576px) { 
     .img-bg {
         max-width: 600px;
     }
@@ -250,7 +250,7 @@ a {
     border-radius: 20px;
     max-width: fit-content;
 }
-@media (min-width: 576px) { 
+@media screen and (min-width: 576px) { 
     .terms {
         width: 80%;
         max-width: 1200px;
@@ -365,6 +365,7 @@ footer{
 }
 
 .sign-bg{
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    height: fit-content;
     background: transparent url('/assets/Mask_Group_17.png') 100% 0% no-repeat padding-box;
 }

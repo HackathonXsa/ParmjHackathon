@@ -44,23 +44,31 @@
         <div class="d-flex justify-content-center py-5">
             <div class="card" style="width: 24rem;">
                 <div class="card-body">
-                  <h5 class="card-title text-center mb-3">تسجيل الدخول</h5>
-                  <form>
-                    <div class="mb-3">
-                      <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
-                      <input type="email" placeholder="email@domain.com" class="form-control" id="InputEmail">
-                    </div>
-                    <div class="mb-3">
-                      <label for="InputPassword" class="form-label">كلمة المرور</label>
-                      <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPassword">
-                    </div>
-                    <div class="mb-3">
-                      <span>ليس لديك حساب؟ <a href="{{URL::route('signup')}}">سجل</a></span>
-                    </div>
-                    <button type="submit" class="btn accent-main-bg">دخول</button>
-                  </form>
+                    <h5 class="card-title text-center mb-3">تسجيل الدخول</h5>
+                    <form>
+                        <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
+                        <div class="input-group has-validation mb-3">
+                            <!-- is-invalid -->
+                            <input type="email" placeholder="email@domain.com" class="form-control is-invalid" id="InputEmail" aria-describedby="validationServerEmailFeedback">
+                            <div id="validationServerEmailFeedback" class="invalid-feedback">
+                                البريد الإلكتروني غير مسجل.
+                            </div>
+                        </div>
+                        <label for="InputPassword" class="form-label">كلمة المرور</label>
+                        <div class="input-group has-validation mb-3">
+                            <!-- is-invalid -->
+                            <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control is-invalid" id="InputPassword" aria-describedby="validationServerPasswordFeedback">
+                            <div id="validationServerPasswordFeedback" class="invalid-feedback">
+                                كلمة المرور غير صحيحة.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span>ليس لديك حساب؟ <a href="{{URL::route('signup')}}">سجل</a></span>
+                        </div>
+                        <button type="submit" class="btn accent-main-bg">دخول</button>
+                    </form>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
 
