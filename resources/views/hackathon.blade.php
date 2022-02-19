@@ -86,34 +86,34 @@
                 <p class="text-center fs-5 accent-sec">باقي على الإنطلاق</p>
                 <div class="shadow p-3 mx-auto mb-5 bg-body" id="countdown">
                     <div class="d-flex flex-row justify-content-center align-items-center">
-                        <div class="mx-4">
-                            <img src="{{ asset('assets/coding.svg') }}" class="img-overlay" width="60">
-                            <img src="{{ asset('assets/suitcase.png') }}" width="60">
+                        <div class="mx-1 mx-md-2 mx-xl-4">
+                            <img src="{{ asset('assets/coding.svg') }}" class="img-overlay countdown-icon">
+                            <img src="{{ asset('assets/suitcase.png') }}" class="countdown-icon">
                         </div>
                         <!--
                         <div class="countdown-item text-center px-2">
-                            <p class="font-bold fs-1 mb-1 accent-main" id="second">00</p>
+                            <p class="font-bold mb-1 accent-main" id="second">00</p>
                             ثانية
                         </div>
                         <div>:</div>
                         -->
                         <div class="countdown-item text-center px-2">
-                            <p class="font-bold fs-1 mb-1 accent-main" id="minute">00</p>
+                            <p class="font-bold mb-1 accent-main" id="minute">00</p>
                             دقيقة
                         </div>
                         <div>:</div>
                         <div class="countdown-item text-center px-2">
-                            <p class="font-bold fs-1 mb-1 accent-main" id="hour">00</p>
+                            <p class="font-bold mb-1 accent-main" id="hour">00</p>
                             ساعة
                         </div>
                         <div>:</div>
                         <div class="countdown-item text-center px-2">
-                            <p class="font-bold fs-1 mb-1 accent-main" id="day">00</p>
+                            <p class="font-bold mb-1 accent-main" id="day">00</p>
                             يوم
                         </div>
                         <div>:</div>
                         <div class="countdown-item text-center px-2">
-                            <p class="font-bold fs-1 mb-1 accent-main" id="month">00</p>
+                            <p class="font-bold mb-1 accent-main" id="month">00</p>
                             شهر
                         </div>
                     </div>
@@ -122,7 +122,7 @@
         </div>
         <br>
         <div class="terms accent-sec-bg mx-auto my-5">
-            <div class="d-flex flex-lg-row flex-column justify-content-around align-items-start align-items-sm-center">
+            <div class="d-flex flex-lg-row flex-column justify-content-around align-items-start align-items-lg-center">
                 <div class="d-flex flex-row my-2">
                     <svg class="align-self-center mx-3" id="clock" xmlns="http://www.w3.org/2000/svg" width="55.272" height="55.272" viewBox="0 0 55.272 55.272">
                         <path id="Path_15426" data-name="Path 15426" d="M49.456,14.543a2.3,2.3,0,0,0-1.07,3.076,22.8,22.8,0,0,1,2.28,10.017,23.03,23.03,0,1,1-23.03-23.03,22.753,22.753,0,0,1,14.3,4.969A2.3,2.3,0,1,0,44.8,5.97,27.64,27.64,0,1,0,55.272,27.636a27.354,27.354,0,0,0-2.74-12.023A2.3,2.3,0,0,0,49.456,14.543Zm0,0" fill="#fff" />

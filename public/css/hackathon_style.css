@@ -213,20 +213,44 @@ a {
 
 @media screen and (min-width: 576px) { 
     .container-custom-main {
-        max-width: 50%;
+        max-width: 60%;
     }
 }
 #countdown{
     border-radius: 20px;
-    max-width: 90%;
+    width: 450px;
 }
-@media screen and (min-width: 576px) { 
-    .container-custom-main {
-        max-width: 600px;
+@media screen and (max-width: 768px) { 
+    #countdown {
+        width: 50vw;
     }
 }
+@media screen and (max-width: 576px) { 
+    #countdown {
+        width: 90%;
+    }
+}
+
+.countdown-icon{
+    width: 60px;
+}
 .countdown-item{
-    width: 80px;
+    max-width: 80px;
+}
+.countdown-item p {
+    font-size: 2.5rem;
+}
+@media screen and (max-width: 376px) { 
+    .countdown-icon{
+        width: 45px;
+    }
+    .countdown-item{
+        max-width: 60px;
+        font-size: 0.75rem;
+    }
+    .countdown-item p {
+        font-size: 1.5rem;
+    }
 }
 
 .img-overlay{
@@ -239,7 +263,7 @@ a {
 }
 .img-bg{
     max-width: 250px;
-    right: 80%;
+    right: 80vw;
 }
 @media screen and (min-width: 576px) { 
     .img-bg {
@@ -250,7 +274,7 @@ a {
     border-radius: 20px;
     max-width: fit-content;
 }
-@media screen and (min-width: 576px) { 
+@media screen and (min-width: 992px) { 
     .terms {
         width: 80%;
         max-width: 1200px;
