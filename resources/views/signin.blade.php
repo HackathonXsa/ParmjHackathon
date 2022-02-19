@@ -44,7 +44,7 @@
         <div class="d-flex justify-content-center py-5">
             <div class="card" style="width: 24rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-center mb-3">تسجيل الدخول</h5>
+                    <h5 class="card-title text-center font-bold mb-3">تسجيل الدخول</h5>
                     <form>
                         <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
                         <div class="input-group has-validation mb-3">

@@ -333,13 +333,13 @@
     <br>
     <section class="timeline">
         <div class="timeline-body mx-auto">
-            <div class="timeline-title">الجدول الزمني</div>
+            <div class="text-center fs-1 font-bold mb-5">الجدول الزمني</div>
             <!---row-->
             <div class="row g-0 timeline-elements-container justify-content-md-center">
                 <!---Timeline element-->
                 <div class="col-md-2 text-center">
                     <div class="row g-0 justify-content-md-center">
-                        <div class="timeline-element-title">المرحلة الأولى</div>
+                        <div class="timeline-element-title font-bold">المرحلة الأولى</div>
                     </div>
                     <div class="row g-0 justify-content-md-center">
                         <div class="timeline-element-desc">الإعلان عن المبادرة</div>
@@ -353,7 +353,7 @@
                 <!---Timeline element-->
                 <div class="col-md-2 text-center">
                     <div class="row g-0 justify-content-md-center">
-                        <div class="timeline-element-title">المرحلة الثانية</div>
+                        <div class="timeline-element-title font-bold">المرحلة الثانية</div>
                     </div>
                     <div class="row g-0 justify-content-md-center">
                         <div class="timeline-element-desc">استقبال المستثمرين والشركاء</div>
@@ -366,7 +366,7 @@
                 <div class="col-md-1 timeline-seperator"></div>
                 <!---Timeline element-->
                 <div class="col-md-2 text-center">
-                    <div class="timeline-element-title">المرحلة الثالثة</div>
+                    <div class="timeline-element-title font-bold">المرحلة الثالثة</div>
                     <div class="timeline-element-desc">الحملات الإعلانية للهاكثونات</div>
                     <div class="timeline-element-date">Sep, 1 2021</div>
                 </div>
@@ -374,7 +374,7 @@
                 <div class="col-md-1 timeline-seperator"></div>
                 <!---Timeline element-->
                 <div class="col-md-2 text-center">
-                    <div class="timeline-element-title">المرحلة الرابعة</div>
+                    <div class="timeline-element-title font-bold">المرحلة الرابعة</div>
                     <div class="timeline-element-desc">إطلاق الهاكثونات</div>
                     <div class="timeline-element-date">Sep, 1 2021</div>
                 </div>
@@ -384,14 +384,14 @@
         </div>
     </section>
     <div class="container my-5">
-        <p class="text-center fs-1">
+        <p class="text-center fs-1 font-bold">
             الأسئلة الشائعة
         </p>
         <div class="mx-3">
             <div class="accordion accordion-flush" id="accordionFlushQandA">
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
                             هل يمكنني ان اسجل بدون فريق؟
                         </button>
                     </p>
@@ -405,7 +405,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             ماهو العمر المقبول للتسجيل؟
                         </button>
                     </p>
@@ -419,7 +419,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             هل يمكنني التسجيل بدون خبرة؟
                         </button>
                     </p>
@@ -433,7 +433,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
                             كيف بإمكاني التسجيل؟
                         </button>
                     </p>
@@ -447,7 +447,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading5">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
                             كيف سيتم اعلامي بقبولي؟
                         </button>
                     </p>
@@ -460,8 +460,8 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <p class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                    <p class="accordion-header font-bold" id="flush-headingThree">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
                             ماهي شروط القبول؟
                         </button>
                     </p>
@@ -475,7 +475,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading7">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
                             ماهي الأدوات التي أحتاجها؟
                         </button>
                     </p>
@@ -489,7 +489,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
                             ماهو مقدار معرفتي البرمجية للمشاركة؟
                         </button>
                     </p>
@@ -503,7 +503,7 @@
                 </div>
                 <div class="accordion-item">
                     <p class="accordion-header" id="flush-heading9">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                        <button class="font-bold accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
                             هل سنحصل على شهادات للمشاركة؟
                         </button>
                     </p>
@@ -520,7 +520,7 @@
     </div>
     <div class="main-bg mt-5 py-5">
         <div class="container">
-            <p class="text-center fs-1">
+            <p class="text-center fs-1 font-bold">
                 الرعاه
             </p>
             <div class="owl-carousel">
@@ -555,7 +555,7 @@
         <div class="d-flex flex-sm-row flex-column align-items-center">
             <p class="fs-5 text-center me-sm-5 mb-sm-0">اطلق قدراتك وانضم لهاكثون السفر</p>
             <a href="#">
-                <button type="button" class="btn btn-primary btn-lg join-us-blue ms-sm-5 py-3">انضم لنا الان</button>
+                <button type="button" class="btn btn-primary btn-lg join-us-blue font-bold ms-sm-5 py-3">انضم لنا الان</button>
             </a>
         </div>
     </div>
