@@ -49,7 +49,7 @@
             <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
             <div class="input-group has-validation mb-3">
               <!-- is-invalid -->
-              <input type="email" placeholder="email@domain.com" class="form-control is-invalid" id="InputEmail" aria-describedby="validationServerEmailFeedback">
+              <input type="email" placeholder="email@domain.com" class="form-control" id="InputEmail" aria-describedby="validationServerEmailFeedback">
               <div id="validationServerEmailFeedback" class="invalid-feedback">
                 البريد الإلكتروني مسجل.
               </div>
@@ -57,7 +57,7 @@
             <label for="InputEmailConfirm" class="form-label">تأكيد البريد الإلكتروني</label>
             <div class="input-group has-validation mb-3">
               <!-- is-invalid -->
-              <input type="email" placeholder="email@domain.com" class="form-control is-invalid" id="InputEmailConfirm" aria-describedby="validationServerEmailConfirmFeedback">
+              <input type="email" placeholder="email@domain.com" class="form-control" id="InputEmailConfirm" aria-describedby="validationServerEmailConfirmFeedback">
               <div id="validationServerEmailConfirmFeedback" class="invalid-feedback">
                 تأكيد البريد الإلكتروني غير صحيح.
               </div>
@@ -65,7 +65,7 @@
             <label for="InputPhone" class="form-label">رقم الجوال</label>
             <div class="input-group has-validation mb-3">
               <!-- is-invalid -->
-              <input type="tel" pattern="05[0-9]{8}" placeholder="05XXXXXXXX" class="form-control is-invalid" id="InputPhone" aria-describedby="validationServerPhoneFeedback">
+              <input type="tel" pattern="05[0-9]{8}" placeholder="05XXXXXXXX" class="form-control" id="InputPhone" aria-describedby="validationServerPhoneFeedback">
               <div id="validationServerPhoneFeedback" class="invalid-feedback">
                 رقم الجوال غير صحيح.
               </div>
@@ -73,7 +73,7 @@
             <label for="InputPassword" class="form-label">كلمة المرور</label>
             <div class="input-group has-validation mb-3">
               <!-- is-invalid -->
-              <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control is-invalid" id="InputPassword" aria-describedby="validationServerPasswordFeedback">
+              <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPassword" aria-describedby="validationServerPasswordFeedback">
               <div id="validationServerPasswordFeedback" class="invalid-feedback">
                 كلمة المرور غير صحيحة.
               </div>
@@ -81,7 +81,7 @@
             <label for="InputPasswordConfirm" class="form-label">تأكيد كلمة المرور</label>
             <div class="input-group has-validation mb-3">
               <!-- is-invalid -->
-              <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control is-invalid" id="InputPasswordConfirm" aria-describedby="validationServerPasswordConfirmFeedback">
+              <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPasswordConfirm" aria-describedby="validationServerPasswordConfirmFeedback">
               <div id="validationServerPasswordConfirmFeedback" class="invalid-feedback">
                 تأكيد كلمة المرور غير صحيح.
               </div>

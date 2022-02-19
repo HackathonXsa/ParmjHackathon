@@ -49,7 +49,7 @@
                         <label for="InputEmail" class="form-label">البريد الإلكتروني</label>
                         <div class="input-group has-validation mb-3">
                             <!-- is-invalid -->
-                            <input type="email" placeholder="email@domain.com" class="form-control is-invalid" id="InputEmail" aria-describedby="validationServerEmailFeedback">
+                            <input type="email" placeholder="email@domain.com" class="form-control" id="InputEmail" aria-describedby="validationServerEmailFeedback">
                             <div id="validationServerEmailFeedback" class="invalid-feedback">
                                 البريد الإلكتروني غير مسجل.
                             </div>
@@ -57,7 +57,7 @@
                         <label for="InputPassword" class="form-label">كلمة المرور</label>
                         <div class="input-group has-validation mb-3">
                             <!-- is-invalid -->
-                            <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control is-invalid" id="InputPassword" aria-describedby="validationServerPasswordFeedback">
+                            <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control" id="InputPassword" aria-describedby="validationServerPasswordFeedback">
                             <div id="validationServerPasswordFeedback" class="invalid-feedback">
                                 كلمة المرور غير صحيحة.
                             </div>
