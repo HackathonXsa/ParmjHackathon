@@ -20,9 +20,9 @@
     <header>
         <div class="container">
             <div class="d-flex flex-row justify-content-center justify-content-xl-between align-items-center">
-                    <div class="logo mx-5">
-                        <img src="{{ asset('assets/Untitled_design-13@2x-c.png') }}" alt="logo">
-                    </div>
+                <div class="logo mx-5">
+                    <img src="{{ asset('assets/Untitled_design-13@2x-c.png') }}" alt="logo">
+                </div>
                 <nav>
                     <a class="px-3" href="#">الرئيسية</a>
                     <a class="px-3" href="#">الهاكثونات</a>
@@ -79,9 +79,9 @@
                 <h1 class="text-center py-5 font-bold accent-sec">{{$namehacka->name}}</h1>
                 <br>
                 <!-- text -->
-                <p class="text-center py-3 accent-third">تحدي مطور لمدة ثلاث ايام لإنشاء أدوات ومنتجات رقمية جديدة
-                    وإعادة تشكيل مستقبل صناعة
-                    السفر والسياحة والضيافة</p>
+                <p class="text-center py-3 accent-third">
+                    {{$namehacka->body}}
+                </p>
                 <br>
                 <p class="text-center fs-5 accent-sec">باقي على الإنطلاق</p>
                 <div class="shadow p-3 mx-auto mb-5 bg-body" id="countdown">
@@ -163,7 +163,7 @@
                         <span class="font-bold">الفئة المستهدفة</span>
                         <br>
                         <!-- text -->
-                        <span>المبرمجين،المصممين</span>
+                        <span>{{$namehacka->targeted}}</span>
                     </div>
                 </div>
                 <div class="d-flex flex-row my-2">
@@ -212,7 +212,7 @@
                         </span>
                         <br>
                         <!-- text -->
-                        <span>٣-٥ اعضاء</span>
+                        <span>{{$namehacka->teamsNum}}</span>
                     </div>
                 </div>
                 <div class="d-flex flex-row my-2">
@@ -241,7 +241,7 @@
                         </span>
                         <br>
                         <!-- text -->
-                        <span>اونلاين</span>
+                        <span>{{$namehacka->hackathon_type}}</span>
                     </div>
                 </div>
             </div>

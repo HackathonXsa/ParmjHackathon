@@ -27,8 +27,11 @@ class HackathonController extends Controller
         $inputs = request()->validate([
             'name'=>'required|min:1|max:255',
             'hackathon_image'=>'required',
-            'body'=>'required',
-            'date'=> 'required'
+            'date'=> 'required',
+            'targeted'=> 'required',
+            'teamsNum'=> 'required',
+            'hackathon_type'=> 'required',
+            'body'=>'required'
 
         ]);
 
