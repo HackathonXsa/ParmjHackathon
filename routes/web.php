@@ -28,6 +28,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/{hackathon}/hackathon', [HackathonPagesController::class, 'home'])->name('home.hackathon');
 
+Route::get('/{hackathon}/joinus', [HackathonPagesController::class, 'joinus'])->name('joinus.hackathon');
+
+
 Route::get('/signin', function () {
     return view('signin');
 })->name('signin');

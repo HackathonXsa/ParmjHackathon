@@ -23,6 +23,17 @@ class HackathonPagesController extends Controller
 
         return view('hackathon', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
     }
+    public function joinus(HackathonPages $hackathon){
+
+        // $this->authorize('view', $hackathon);
+        $id = $hackathon->hackathon_id;
+        $name = Hackathon::find($id);
+        $challenge = DB::table('hackathon_challenges')->where('hackathon_id', '=', $id)->get();
+        $field = DB::table('hackathon_fields')->where('hackathon_id', '=', $id)->get();
+        $timeline = DB::table('hackathon_timelines')->where('hackathon_id', '=', $id)->get();
+
+        return view('joinus', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
+    }
 
 
     public function edit(HackathonPages $hackathon){
