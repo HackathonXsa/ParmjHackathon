@@ -554,7 +554,7 @@
     <div class="join-us accent-sec-bg py-5 px-5 d-flex justify-content-center align-items-center">
         <div class="d-flex flex-sm-row flex-column align-items-center">
             <p class="fs-5 text-center me-sm-5 mb-sm-0">اطلق قدراتك وانضم لهاكثون السفر</p>
-            <a href="#">
+            <a href="{{ route('joinus.hackathon', $namehacka->id) }}">
                 <button type="button" class="btn btn-primary btn-lg join-us-blue font-bold ms-sm-5 py-3">انضم لنا الان</button>
             </a>
         </div>

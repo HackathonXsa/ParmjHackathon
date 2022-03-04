@@ -34,6 +34,31 @@ class HackathonPagesController extends Controller
 
         return view('joinus', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
     }
+    public function joinus_store(HackathonPages $hackathon){
+        $id = $hackathon->hackathon_id;
+        $name = Hackathon::find($id);
+        $challenge = DB::table('hackathon_challenges')->where('hackathon_id', '=', $id)->get();
+        $field = DB::table('hackathon_fields')->where('hackathon_id', '=', $id)->get();
+        $timeline = DB::table('hackathon_timelines')->where('hackathon_id', '=', $id)->get();
+        $inputs = request()->validate([
+            'name'=>'required|min:1|max:255',
+            'phone'=>'required',
+            'email'=> 'required',
+            'age'=> 'required'
+        ]);
+        DB::table('hackathon_users')->insert([
+            'hackathon_id' => $id,
+            'hackathon_name' => $name->name,
+            'name' => $inputs['name'],
+            'phone' => $inputs['phone'],
+            'email' => $inputs['email'],
+            'age' => $inputs['age'],
+            'team_name' => request('team_name'),
+            'role' => request('role')
+        ]);
+
+        return view('joinus_done', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
+    }
 
 
     public function edit(HackathonPages $hackathon){

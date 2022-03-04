@@ -18,7 +18,7 @@ class CreateHackathonsTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->text('hackathon_image')->nullable();
-            $table->dateTime('date');
+            $table->dateTime('date'); //$precision = 0
             $table->text('targeted')->nullable();
             $table->text('teamsNum')->nullable();
             $table->text('hackathon_type')->nullable();
