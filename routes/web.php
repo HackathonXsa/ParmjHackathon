@@ -7,6 +7,7 @@ use App\Http\Controllers\HackathonPagesController;
 use App\Http\Controllers\HackathonTimelinesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Models\HackathonUsers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,7 +44,31 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware('auth')->group(function(){
+Route::middleware('auth')->group(function () {
+    Route::get('/all-csv', function () {
+        $headers = [
+            'Cache-Control'       => 'must-revalidate, post-check=0, pre-check=0'
+        ,   'Content-type'        => 'text/csv'
+        ,   'Content-Disposition' => 'attachment; filename=hackathon_users.csv'
+        ,   'Expires'             => '0'
+        ,   'Pragma'              => 'public'
+        ];
+
+        $list = HackathonUsers::all()->toArray();;
+
+        # add headers for each column in the CSV download
+        array_unshift($list, array_keys($list[0]));
+
+        $callback = function () use ($list) {
+            $FH = fopen('php://output', 'w');
+            foreach ($list as $row) {
+                fputcsv($FH, $row);
+            }
+            fclose($FH);
+        };
+
+        return response()->stream($callback, 200, $headers);
+    });
     Route::get('/user/{user}/profile', [UserController::class, 'show'])->name('user.profile.show');
     Route::get('/hackathons', [HackathonController::class, 'index'])->name('hackathon.index');
     Route::get('/hackthons/create', [HackathonController::class, 'create'])->name('hackathon.create');
