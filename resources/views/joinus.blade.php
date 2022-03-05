@@ -46,7 +46,7 @@
           <h5 class="card-title text-center font-bold mb-3">إنضم إلى {{$namehacka->name}}</h5>
           <form method="POST" action="joinus" class="needs-validation" novalidate>
             @csrf <!-- {{ csrf_field() }} -->
-            <label for="InputName" class="form-label">الاسم</label>
+            <label for="InputName" class="form-label">الاسم الكامل</label>
             <div class="mb-3">
               <!-- is-invalid -->
               <input type="text" placeholder="اكتب اسمك" class="form-control" id="InputName" name="name" aria-describedby="validationServerNameFeedback" required>
