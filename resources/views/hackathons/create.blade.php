@@ -349,6 +349,7 @@
         <select name="hackathon_type" id="hackathon_type" placeholder="نوع المسابقة">
           <option value="اونلاين">اونلاين</option>
           <option value="حضوري">حضوري</option>
+          <option value="أونلاين و حضوري">أونلاين و حضوري</option>
         </select>
       </div>
       {{-- <div class="form-group">
