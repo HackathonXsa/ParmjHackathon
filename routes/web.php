@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\emailNotificationController;
 use App\Http\Controllers\HackathonChallengesController;
 use App\Http\Controllers\HackathonController;
 use App\Http\Controllers\HackathonFieldsController;
@@ -69,6 +70,9 @@ Route::middleware('auth')->group(function () {
 
         return response()->stream($callback, 200, $headers);
     });
+    Route::get('/sendEmails', [emailNotificationController::class, 'sendEmailNotificationView']);
+    Route::post('/sendEmails', [emailNotificationController::class, 'sendEmailNotification']);
+
     Route::get('/user/{user}/profile', [UserController::class, 'show'])->name('user.profile.show');
     Route::get('/hackathons', [HackathonController::class, 'index'])->name('hackathon.index');
     Route::get('/hackthons/create', [HackathonController::class, 'create'])->name('hackathon.create');
