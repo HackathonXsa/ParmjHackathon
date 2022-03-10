@@ -21,7 +21,8 @@ class CreateHackathonUsers extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('age');
+            $table->date('birthdate');
+            //$table->string('age');
             $table->text('team_name')->nullable();
             $table->text('role')->nullable();
             $table->timestamps();

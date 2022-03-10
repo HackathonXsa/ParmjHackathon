@@ -71,14 +71,15 @@
                 البريد الإلكتروني غير صحيح.
               </div>
             </div>
+            <!--
             <label for="InputAge" class="form-label">العمر</label>
-            <div class="mb-3">
-              <!-- is-invalid -->
+            <div class="mb-3">-->
+              <!-- is-invalid --><!--
               <input type="text" pattern="[0-9]*" maxlength="2" placeholder="أدخل عمرك" class="form-control" id="InputAge" name="age" aria-describedby="validationServerAgeFeedback" required>
               <div id="validationServerAgeFeedback" class="invalid-feedback">
                 العمر غير صحيح.
               </div>
-            </div>
+            </div>-->
             <label for="InputDate" class="form-label">تاريخ الميلاد</label>
             <div class="mb-3">
               <!-- is-invalid -->

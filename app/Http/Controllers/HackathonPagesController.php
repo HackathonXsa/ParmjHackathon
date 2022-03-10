@@ -44,15 +44,20 @@ class HackathonPagesController extends Controller
             'name'=>'required|min:1|max:255',
             'phone'=>'required',
             'email'=> 'required',
-            'age'=> 'required'
+            'day'=> 'required',
+            'month'=> 'required',
+            'year'=> 'required'
         ]);
+        $date = date_create();
+        date_date_set($date, $inputs['year'], $inputs['month'], $inputs['day']);
+        
         DB::table('hackathon_users')->insert([
             'hackathon_id' => $id,
             'hackathon_name' => $name->name,
             'name' => $inputs['name'],
             'phone' => $inputs['phone'],
             'email' => $inputs['email'],
-            'age' => $inputs['age'],
+            'birthdate' => $date,
             'team_name' => request('team_name'),
             'role' => request('role')
         ]);
