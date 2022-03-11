@@ -56,7 +56,8 @@ class emailNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'subject' => $this->emailData['subject'],
+            'body' => $this->emailData['body'],
         ];
     }
 }

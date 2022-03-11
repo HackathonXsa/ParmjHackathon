@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\sendingJob;
 use App\Models\HackathonUsers;
 use App\Notifications\emailNotification;
 use Illuminate\Http\Request;
@@ -29,7 +30,12 @@ class emailNotificationController extends Controller
             $users = HackathonUsers::where('hackathon_id', $inputs['hackathon_select'])->get('email');;
         };
         
-        Notification::send($users, new emailNotification($inputs));
+        foreach($users as $user){
+            //$user->notify(new emailNotification($inputs));
+            dispatch(new sendingJob($user, $inputs));
+        };
+        
+        //Notification::sendNow($users, new emailNotification($inputs));
         
         session()->flash('post-created-message', 'Email Notifications was sent');
         return view('sendEmails')->with('hackathon_users', $hackathon_users);
