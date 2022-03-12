@@ -394,6 +394,7 @@
                           <th>Delete</th>
                         </tr>
                       </thead>
+                      <!--
                       <tfoot>
                         <tr>
                             <th>Id</th>
@@ -405,6 +406,7 @@
                             <th>Delete</th>
                         </tr>
                       </tfoot>
+                      -->
                       <tbody>
                         @foreach ($hackathons as $hackathon)
                           <tr>
