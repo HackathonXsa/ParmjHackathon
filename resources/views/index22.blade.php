@@ -117,7 +117,7 @@
 
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
-                var header = document.querySelector("nav");
+                let header = document.querySelector("nav");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
         </script>
