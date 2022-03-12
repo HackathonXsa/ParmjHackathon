@@ -139,7 +139,7 @@
                 إختر دورك.
               </div>
             </div>
-            <button type="submit" class="btn accent-main-bg">إنضم</button>
+            <button type="submit" class="btn join-btn">إنضم</button>
           </form>
         </div>
       </div>

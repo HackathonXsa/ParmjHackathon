@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /*
 header {
     display: flex;        
@@ -174,19 +177,12 @@ a {
     text-decoration: none;
     color: black;
 }
-.accent-white{
-    color: white;
-}
 .accent-main{
     color: #30ADBE;
 }
 .accent-main-bg{
     color: white;
     background-color: #30ADBE;
-}
-.accent-main-bg:hover{
-    background-color: #0E273B;
-    color: white;
 }
 .accent-sec{
     color: #0E273B;
@@ -386,6 +382,14 @@ a {
     background-color: #30ADBE;
     border: 1px solid #30ADBE;
 }
+.join-btn {
+    color: white;
+    background-color: #30ADBE;
+}
+.join-btn:hover {
+    color: white;
+    background-color: #0E273B;
+}
 
 footer{
     background: transparent url('/assets/coding.svg') 100% 0% no-repeat padding-box;
@@ -396,3 +400,4 @@ footer{
     height: fit-content;
     background: transparent url('/assets/Mask_Group_17.png') 100% 0% no-repeat padding-box;
 }
+

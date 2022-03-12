@@ -1,15 +1,15 @@
 /* Fonts */
 @font-face {
     font-family: 'TBukra-Light';
-    src: url('../fonts/29LT-Bukra-Light.otf') format('opentype');
+    src: url('../fonts/alfont_com_AlFont_com_4_C7.ttf') format('truetype');
   }
   @font-face {
     font-family: 'TBukra-Regular';
-    src: url('../fonts/29LT-Bukra-Regular.otf') format('opentype');
+    src: url('../fonts/alfont_com_AlFont_com_4_C7.ttf') format('truetype');
   }
   @font-face {
     font-family: 'TBukra-Bold';
-    src: url('../fonts/29LT-Bukra-Bold.otf') format('opentype');
+    src: url('../fonts/alfont_com_AlFont_com_4_C9.ttf') format('truetype');
   }
 
   html {

@@ -24,25 +24,23 @@
                     <img src="{{ asset('assets/Untitled_design-13@2x-c.png') }}" alt="logo">
                 </div>
                 <nav>
-                    <a class="px-3" href="#">الرئيسية</a>
-                    <a class="px-3" href="#">الهاكثونات</a>
-                    <a class="px-3" href="#">التقويم</a>
-                    <a class="px-3" href="#">الأسئلة الشائعة</a>
+                    <a class="px-3" href="{{ route('home.index') }}">الرئيسية</a>
+                    <a class="px-3" href="{{ route('home.index') }}">الهاكثونات</a>
+                    <a class="px-3" href="#timeline">التقويم</a>
+                    <a class="px-3" href="#Questions">الأسئلة الشائعة</a>
                 </nav>
                 <div class="signin mx-5">
-                    <!-- href -->
-                    <a class="px-4 accent-main font-bold" href="{{URL::route('signin')}}">تسجيل الدخول</a>
+                    <div style="width: 160px;"></div>
                 </div>
             </div>
         </div>
     </header>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">الرئيسية</a>
-        <a href="#">الهاكثونات</a>
-        <a href="#">التقويم</a>
-        <a href="#">الأسئلة الشائعة</a>
-        <a href="{{URL::route('signin')}}">تسجيل الدخول</a>
+        <a href="{{ route('home.index') }}">الرئيسية</a>
+        <a href="{{ route('home.index') }}">الهاكثونات</a>
+        <a href="#timeline">التقويم</a>
+        <a href="#Questions">الأسئلة الشائعة</a>
     </div>
     <span class="sidebtn" onclick="openNav()">&#9776;</span>
     <!--
@@ -331,7 +329,7 @@
         <br>
     </div>
     <br>
-    <section class="timeline">
+    <section class="timeline" id="timeline">
         <div class="timeline-body mx-auto">
             <div class="text-center fs-1 font-bold mb-5">الجدول الزمني</div>
             <!---row-->
@@ -383,7 +381,7 @@
             <!---end row-->
         </div>
     </section>
-    <div class="container my-5">
+    <div class="container my-5" id="Questions">
         <p class="text-center fs-1 font-bold">
             الأسئلة الشائعة
         </p>
@@ -554,7 +552,7 @@
     <div class="join-us accent-sec-bg py-5 px-5 d-flex justify-content-center align-items-center">
         <div class="d-flex flex-sm-row flex-column align-items-center">
             <p class="fs-5 text-center me-sm-5 mb-sm-0">اطلق قدراتك وانضم لهاكثون السفر</p>
-            <a href="{{ route('joinus.hackathon', $namehacka->id) }}">
+            <a href="{{ route('joinus.hackathon') }}">
                 <button type="button" class="btn btn-primary btn-lg join-us-blue font-bold ms-sm-5 py-3">انضم لنا الان</button>
             </a>
         </div>
