@@ -16,7 +16,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="#" target="_blank">
-        <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{ asset('assets/Untitled_design-13@2x-c.png') }}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="me-1 font-weight-bold">Hackathons</span>
       </a>
     </div>
@@ -125,6 +125,7 @@
             <span class="nav-link-text me-1">إشعارات البريد</span>
           </a>
         </li>
+        <!--
         <li class="nav-item">
           <a class="nav-link " href="../pages/virtual-reality.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center ms-2 d-flex align-items-center justify-content-center">
@@ -230,6 +231,7 @@
             <span class="nav-link-text me-1">اشتراك</span>
           </a>
         </li>
+        -->
       </ul>
     </div>
   </aside>
@@ -454,6 +456,7 @@
               .
               </div>
             </div>
+            <!--
             <div class="col-lg-6">
               <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                 <li class="nav-item">
@@ -470,6 +473,7 @@
                 </li>
               </ul>
             </div>
+            -->
           </div>
         </div>
       </footer>

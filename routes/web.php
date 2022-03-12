@@ -47,6 +47,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/all-csv', function () {
+        return view('allUsersDownload');
+    });
+    Route::post('/all-csv', function () {
         $headers = [
             'Cache-Control'       => 'must-revalidate, post-check=0, pre-check=0'
         ,   'Content-type'        => 'text/csv'

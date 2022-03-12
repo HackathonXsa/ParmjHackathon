@@ -17,7 +17,7 @@
     <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
     <a class="navbar-brand m-0" href="#" target="_blank">
       <img src="{{ asset('assets/Untitled_design-13@2x-c.png') }}" class="navbar-brand-img h-100" alt="main_logo">
-      <span class="me-1 font-weight-bold">Notifications</span>
+      <span class="me-1 font-weight-bold">All users</span>
     </a>
   </div>
   <hr class="horizontal dark mt-0">
@@ -84,7 +84,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../all-csv">
+        <a class="nav-link active" href="../all-csv">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center ms-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>box-3d-50</title>
@@ -105,7 +105,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="../sendEmails">
+        <a class="nav-link" href="../sendEmails">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center ms-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>customer-support</title>
@@ -242,9 +242,9 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 ">
           <li class="breadcrumb-item text-sm ps-2"><a class="opacity-5 text-dark" href="javascript:;">الصفحة الرئيسية</a></li>
-          <li class="breadcrumb-item text-sm text-dark active" aria-current="page">إشعارات البريد</li>
+          <li class="breadcrumb-item text-sm text-dark active" aria-current="page">كل المستخدمين</li>
         </ol>
-        <h6 class="font-weight-bolder mb-0">إشعارات البريد</h6>
+        <h6 class="font-weight-bolder mb-0">كل المستخدمين</h6>
       </nav>
       <div class="collapse navbar-collapse mt-sm-0 mt-2 px-0" id="navbar">
         <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -372,26 +372,11 @@
   <div class="alert alert-info">{{session('post-updated-message')}}</div>
   @endif
   <div class="container">
-    <form method="POST" action="sendEmails" enctype="multipart/form-data">
+    <form method="POST" action="all-csv" enctype="multipart/form-data">
       @csrf
       <!-- {{ csrf_field() }} -->
-      <div class="form-group">
-        <label for="hackathon_select">إلى</label>
-        <select class="form-control" name="hackathon_select" id="hackathon_select" placeholder="الهاكثون ..">
-          <option selected value="all">الكل</option>
-          @foreach ($hackathon_users as $hackathon_user)
-          <option value="{{$hackathon_user->hackathon_id}}">{{ $hackathon_user->hackathon_name }}</option>
-          @endforeach
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="subject">الموضوع</label>
-        <input type="text" name="subject" class="form-control" id="subject" aria-describedby="" placeholder="الموضوع">
-      </div>
-      <div class="form-group">
-        <textarea name="body" class="form-control" id="body" cols="30" rows="10" placeholder="النص"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">ارسال</button>
+      
+      <button type="submit" class="btn btn-primary">تحميل كل المستخدمين بصيغة CSV</button>
 
     </form>
   </div>
