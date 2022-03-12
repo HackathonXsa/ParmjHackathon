@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('OwlCarousel/assets/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hackathon_style.css') }}">
 
+    <link rel="icon" type="image/png" href="{{ asset('assets/suitcase.png') }}" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>{{$namehacka->name}}</title>
