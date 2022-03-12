@@ -355,6 +355,7 @@ body{
     text-shadow: 1px -1px 0px #0000004D;
     opacity: 1;
 }
+
 .join-us{
     padding: 20px 160px 20px 160px;
     margin-top: 143px;
@@ -362,6 +363,7 @@ body{
     background-color: #30ADBE;
     border: 1px solid #30ADBE;
 }
+
 @media screen and (max-width: 768px) {
     .intro{
         width: 100vw;
@@ -389,6 +391,7 @@ body{
     .content{
         padding-right: 0%;
     }
+    
     .join-us{
         padding: 5px 5px 5px 5px;
     }
@@ -396,12 +399,13 @@ body{
         padding: 20px 130px 20px 130px;
         margin-left: unset;
     }
+    
 }
 
 /* Fields */
 
 .fields{
-    top: 1082px;
+    /*top: 1082px;*/
     height: 1363px;
     display: flex;
     position: relative;
@@ -455,9 +459,7 @@ body{
     /* background: #EFEFEF 0% 0% no-repeat padding-box; */
     /* border: 1px dashed #0E273B; */
 }
-.field-element-image img{
 
-}
 .col .field-element-image{
     flex: 0 0 0;
 }
@@ -503,7 +505,7 @@ body{
 /* Timeline */
 
 .timeline{
-    top: 1363px;
+    margin-top: 300px;
     display: flex;
     position: relative;
     height: 602px;
@@ -577,7 +579,7 @@ body{
 .sponsors{
     display: flex;
     position: relative;
-    top: 1363px;
+    /*top: 1363px;*/
     /* width: 1920px; */
     width: 100vw;
     height: 539px;
@@ -621,7 +623,7 @@ body{
 .blue-join{
     display: flex;
     position: relative;
-    top: 1363px;
+   /* top: 1363px;*/
     width: 1920px;
     height: 431px;
     background: #0E273B 0% 0% no-repeat padding-box;
@@ -665,17 +667,17 @@ body{
 }
 
 /* Footer */
-
+/*
 footer{
     display: flex;
     position: relative;
-    top: 1363px;
-    /* width: 1920px; */
+    /*top: 1363px;*/
+    /* width: 1920px; *//*
     width: 100%;
     height: 92px;
     background: rgba(239, 239, 239, 0.4) 0% 0% no-repeat padding-box;
 }
-
+*/
 .footer-body{
     display: flex;
     width: 1920px;
@@ -726,4 +728,23 @@ footer{
 }
 .email-text{
     margin-top: 1px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.accent-sec-bg{
+    color: white;
+    background-color: #0E273B;
+}
+.join-us-s{
+    height: 250px;
+}
+.join-us-s-blue{
+    width: 40vh;
+    border-radius: 60px;
+    background-color: #30ADBE;
+    border: 1px solid #30ADBE;
+}
+footer{
+    background: transparent url('/assets/coding.svg') 100% 0% no-repeat padding-box;
 }
