@@ -43,7 +43,7 @@
     <div class="container d-flex flex-column justify-content-center align-items-center py-5">
       <div class="card" style="width: 28rem;">
         <div class="card-body">
-          <h5 class="card-title text-center font-bold mb-3">إنضم إلى {{$namehacka->name}}</h5>
+          <h5 class="card-title text-center font-bold mb-3">إنضم إلى هاكثون برمج</h5>
           <form method="POST" action="joinus" class="needs-validation" novalidate>
             @csrf
             <!-- {{ csrf_field() }} -->
@@ -58,7 +58,7 @@
             <label for="InputPhone" class="form-label">رقم الجوال</label>
             <div class="mb-3">
               <!-- is-invalid -->
-              <input type="tel" pattern="05[0-9]{8}" placeholder="05XXXXXXXX" class="form-control" id="InputPhone" name="phone" aria-describedby="validationServerPhoneFeedback" required>
+              <input type="tel" pattern="05[0-9]{8}" maxlength="10" placeholder="05XXXXXXXX" class="form-control" id="InputPhone" name="phone" aria-describedby="validationServerPhoneFeedback" required>
               <div id="validationServerPhoneFeedback" class="invalid-feedback">
                 رقم الجوال غير صحيح.
               </div>
@@ -74,7 +74,8 @@
             <!--
             <label for="InputAge" class="form-label">العمر</label>
             <div class="mb-3">-->
-              <!-- is-invalid --><!--
+            <!-- is-invalid -->
+            <!--
               <input type="text" pattern="[0-9]*" maxlength="2" placeholder="أدخل عمرك" class="form-control" id="InputAge" name="age" aria-describedby="validationServerAgeFeedback" required>
               <div id="validationServerAgeFeedback" class="invalid-feedback">
                 العمر غير صحيح.
@@ -102,6 +103,19 @@
               </div>
               <div id="validationServerDateFeedback" class="invalid-feedback">
                 تاريخ الميلاد غير صحيح
+              </div>
+            </div>
+            <label for="InputHackathon" class="form-label">مجال الهاكثون</label>
+            <div class="mb-3">
+              <!-- is-invalid -->
+              <select class="form-select" id="InputHackathon" name="hackathon" aria-describedby="validationServerHackathonFeedback" required>
+                <option selected disabled value="">إختر ...</option>
+                @foreach ($hackathons as $hackathon)
+                <option value="{{$hackathon->id}}">{{ $hackathon->name }}</option>
+                @endforeach
+              </select>
+              <div id="validationServerHackathonFeedback" class="invalid-feedback">
+                إختر مجال.
               </div>
             </div>
             <label for="InputTeamName" class="form-label">اسم الفريق</label>
@@ -216,6 +230,7 @@
       option.textContent = 'يوم';
       option.disabled = true;
       option.defaultSelected = true;
+      option.value = '';
       daySelect.appendChild(option);
       for (let i = 1; i <= dayNum; i++) {
         const option = document.createElement("option");

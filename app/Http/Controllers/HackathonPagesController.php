@@ -32,22 +32,23 @@ class HackathonPagesController extends Controller
         $field = DB::table('hackathon_fields')->where('hackathon_id', '=', $id)->get();
         $timeline = DB::table('hackathon_timelines')->where('hackathon_id', '=', $id)->get();
 
-        return view('joinus', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
+        $hackathons = DB::table('hackathons')->select('id', 'name')->distinct()->get();
+
+
+        return view('joinus', ['hackathons'=>$hackathons, 'hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
     }
     public function joinus_store(HackathonPages $hackathon){
-        $id = $hackathon->hackathon_id;
-        $name = Hackathon::find($id);
-        $challenge = DB::table('hackathon_challenges')->where('hackathon_id', '=', $id)->get();
-        $field = DB::table('hackathon_fields')->where('hackathon_id', '=', $id)->get();
-        $timeline = DB::table('hackathon_timelines')->where('hackathon_id', '=', $id)->get();
         $inputs = request()->validate([
             'name'=>'required|min:1|max:255',
             'phone'=>'required',
             'email'=> 'required',
             'day'=> 'required',
             'month'=> 'required',
-            'year'=> 'required'
+            'year'=> 'required',
+            'hackathon'=> 'required'
         ]);
+        $id = $inputs['hackathon'];
+        $name = Hackathon::find($id);
         $date = date_create();
         date_date_set($date, $inputs['year'], $inputs['month'], $inputs['day']);
         
@@ -62,7 +63,7 @@ class HackathonPagesController extends Controller
             'role' => request('role')
         ]);
 
-        return view('joinus_done', ['hackathon'=>$hackathon, 'namehacka'=>$name, 'challenges'=>$challenge, 'fields'=>$field, 'timelines'=>$timeline]);
+        return view('joinus_done', ['hackathon'=>$hackathon, 'namehacka'=>$name]);
     }
 
 

@@ -30,8 +30,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/{hackathon}/hackathon', [HackathonPagesController::class, 'home'])->name('home.hackathon');
 
-Route::get('/{hackathon}/joinus', [HackathonPagesController::class, 'joinus'])->name('joinus.hackathon');
-Route::post('/{hackathon}/joinus', [HackathonPagesController::class, 'joinus_store'])->name('joinus_store.hackathon');
+Route::get('/joinus', [HackathonPagesController::class, 'joinus'])->name('joinus.hackathon');
+Route::post('/joinus', [HackathonPagesController::class, 'joinus_store'])->name('joinus_store.hackathon');
 
 
 Route::get('/signin', function () {
