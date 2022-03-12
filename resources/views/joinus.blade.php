@@ -20,10 +20,10 @@
           <img src="{{ asset('assets/Untitled_design-13@2x-c.png') }}" alt="logo">
         </div>
         <nav>
-          <a class="px-3" href="#">الرئيسية</a>
-          <a class="px-3" href="#">الهاكثونات</a>
-          <a class="px-3" href="#">التقويم</a>
-          <a class="px-3" href="#">الأسئلة الشائعة</a>
+          <a class="px-3" href="{{ route('home.index') }}">الرئيسية</a>
+          <a class="px-3" href="{{ route('home.index') }}">الهاكثونات</a>
+          <a class="px-3" href="{{ route('home.index') }}">التقويم</a>
+          <a class="px-3" href="{{ route('home.index') }}">الأسئلة الشائعة</a>
         </nav>
         <div class="signin mx-5">
           <div style="width: 160px;"></div>
@@ -33,15 +33,16 @@
   </header>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">الرئيسية</a>
-    <a href="#">الهاكثونات</a>
-    <a href="#">التقويم</a>
-    <a href="#">الأسئلة الشائعة</a>
+    <a href="{{ route('home.index') }}">الرئيسية</a>
+    <a href="{{ route('home.index') }}">الهاكثونات</a>
+    <a href="{{ route('home.index') }}">التقويم</a>
+    <a href="{{ route('home.index') }}">الأسئلة الشائعة</a>
   </div>
   <span class="sidebtn" onclick="openNav()">&#9776;</span>
+
   <div class="sign-bg">
     <div class="container d-flex flex-column justify-content-center align-items-center py-5">
-      <div class="card" style="width: 28rem;">
+      <div class="card card-width">
         <div class="card-body">
           <h5 class="card-title text-center font-bold mb-3">إنضم إلى هاكثون برمج</h5>
           <form method="POST" action="joinus" class="needs-validation" novalidate>

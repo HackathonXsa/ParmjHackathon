@@ -399,5 +399,13 @@ footer{
     min-height: calc(100vh - 80px);
     height: fit-content;
     background: transparent url('/assets/Mask_Group_17.png') 100% 0% no-repeat padding-box;
+    background-position: center top;
 }
-
+.card-width{
+    width: 28rem;
+}
+@media screen and (max-width: 576px) { 
+    .card-width{
+        width: 100%;
+    }
+}
